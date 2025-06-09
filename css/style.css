@@ -1,0 +1,375 @@
+:root {
+    --negro: #000;
+    --blanco: #FFF;
+    --verde: #10B981;
+
+    --texto-titulos: "Poppins", sans-serif;
+    --texto-pagina: "Montserrat", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--texto-pagina);
+}
+
+/* Globales */
+.contenedor {
+    max-width: 130rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: var(--texto-titulos);
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+p {
+    text-align: center;
+}
+.barra {
+    border-bottom: 1px solid #e1e1e1;
+}
+/* Header */
+.header {
+    background-image: url(../img/header.jpg);
+    height: 45rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0, .7);
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    color: var(--blanco);
+    font-weight: normal;
+    font-size: 4rem;
+}
+
+.titulo__bold {
+    font-weight: bold;
+}
+
+.navegacion {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navegacion__enlace {
+    color: var(--blanco);
+    font-size: 2.2rem;
+    transition: all 0.3s ease;
+}
+
+.navegacion__enlace:hover {
+    transform: scale(1.15);
+}
+
+.informacion {
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.informacion__titulo {
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+.informacion__descp {
+    font-size: 1.7rem;
+    margin-top: 0;
+}
+
+.informacion__btn {
+    background-color: var(--verde);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.informacion__btn:hover {
+    transform: scale(1.15);
+    background-color: #059669;
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+.navegacion-fija {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(15, 23, 42, 0.95); /* fondo oscuro con transparencia */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px); /* efecto glass opcional */
+    transition: all 0.3s ease;
+}
+
+/** Servicios **/
+.servicios {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+.servicios__descripcion {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+}
+
+.servicios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.servicio__imagen {
+    display: block;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.informacion-servicio {
+    text-align: center;
+    padding: 0 2rem;
+    border: 1px solid #e1e1e1;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+}
+.informacion__titulo-servicios {
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.informacion__btn-servicio {
+    color: var(--negro);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid var(--negro);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.informacion__btn-servicio:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.boton-contenedor {
+    margin-top: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.proyecto__titulo {
+    margin-top: 3rem;
+}
+.proyecto {
+    margin-bottom: 4rem;
+}
+
+.imagenes img {
+    margin-top: 4rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagenes img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.contenedor-sobre-mi {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem ;
+}
+
+.informacion-sobre-mi__descripcion {
+    line-height: 1.5;
+    font-size: 2rem;
+}
+
+.imagen-sobre-mi {
+    height: 40rem;
+    width: 100%;
+    border-radius: 50%;
+}
+.caracteristicas-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.caracteristica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icono {
+    background-color: var(--verde);
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icono:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.caracteristica__texto {
+    font-size: 2rem;
+}
+
+/*Formulario */
+
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset {
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.formulario legend {
+    background-color: var(--verde);
+    width: 100%;
+    text-align: center;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: .6rem;
+    margin-bottom: 4rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label {
+    flex-basis: 10rem;
+}
+
+.campo .input {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+.margin-btn {
+    margin: 0;
+}
+
+.btn-end {
+    display: flex;
+    justify-content: end;
+}
+
+.contenedor-redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.red-social {
+    color: black;
+}
+.red-social:hover svg {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.footer p {
+    font-size: 2.2rem;
+}
+
+/* ir hacia arriba */
+
+.flecha-arriba {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--verde);
+  color: white;
+  font-size: 2.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flecha-arriba:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
