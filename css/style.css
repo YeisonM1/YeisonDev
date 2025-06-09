@@ -491,6 +491,10 @@ p {
     height: 8rem;
     width: 8rem;
   }
+
+  .footer p {
+    font-size: 1.6rem;
+}
 }
 
 @media (max-width: 767px) {
@@ -514,6 +518,7 @@ p {
     padding: 0.5rem 1rem;
   }
 }
+
 
 /* En escritorio ocultamos el botón */
 .btn-menu {
