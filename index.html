@@ -249,12 +249,21 @@
 
         const btnMenu = document.getElementById('btn-menu');
         const menu = document.querySelector('.navegacion');
+        const enlaces = document.querySelectorAll('.navegacion__enlace');
 
         btnMenu.addEventListener('click', () => {
         menu.classList.toggle('navegacion--activa');
         // Alternar entre ☰ y ❌
         btnMenu.textContent = btnMenu.textContent === '☰' ? '✖' : '☰';
-  });
+
+         // Cerrar menú al hacer clic en un enlace
+        enlaces.forEach(enlace => {
+        enlace.addEventListener('click', () => {
+        menu.classList.remove('navegacion--activa');
+        btnMenu.textContent = '☰';
+        });
+    });
+});
 
     </script>
     
