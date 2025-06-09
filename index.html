@@ -17,6 +17,8 @@
             <div id="barra-navegacion" class="barra-superior">
                 <div class="navegacion-principal contenedor">
                     <h1 class="titulo">Yeison<span class="titulo__bold">Dev</span></h1>
+
+                    <button id="btn-menu" class="btn-menu" aria-label="Abrir menú">&#9776;</button>
             
                     <nav class="navegacion">
                         <a class="navegacion__enlace" href="index.html">Incio</a>
@@ -244,6 +246,16 @@
 
         window.open(url, "_blank");
         }
+
+        const btnMenu = document.getElementById('btn-menu');
+        const menu = document.querySelector('.navegacion');
+
+        btnMenu.addEventListener('click', () => {
+        menu.classList.toggle('navegacion--activa');
+        // Alternar entre ☰ y ❌
+        btnMenu.textContent = btnMenu.textContent === '☰' ? '✖' : '☰';
+  });
+
     </script>
     
 </body>
