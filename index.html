@@ -176,11 +176,11 @@
                         <input class="input" id="telefono" type="tel" placeholder="Tu Teléfono" required>
                     </div>
                     <div class="campo">
-                        <label for="telefono">Mensaje</label>
-                        <textarea class="input"></textarea>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" class="input"></textarea>
                     </div>
                     <div class="btn-end">
-                        <input class="informacion__btn margin-btn" type="submit" value="Enviar">
+                        <input class="informacion__btn margin-btn" type="button" value="Enviar" onclick="enviarMensaje()">
                     </div>
                 </fieldset>
             </form>
@@ -231,6 +231,19 @@
             barra.classList.remove('navegacion-fija');
             }
         });
+
+        function enviarMensaje() {
+        const nombre = document.getElementById("nombre").value;
+        const asunto = document.getElementById("asunto").value;
+        const correo = document.getElementById("email").value;
+        const telefono = document.getElementById("telefono").value;
+        const mensaje = document.getElementById("mensaje").value;
+
+        const texto = `Hola, soy ${nombre}%0AAsunto: ${asunto}%0ACorreo: ${correo}%0ATeléfono: ${telefono}%0AMensaje: ${mensaje}`;
+        const url = `https://wa.me/573007056457?text=${texto}`;
+
+        window.open(url, "_blank");
+        }
     </script>
     
 </body>
