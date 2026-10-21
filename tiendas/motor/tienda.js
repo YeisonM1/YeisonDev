@@ -95,7 +95,7 @@
   const navEnlaces = () => `<a href="coleccion.html">Tienda</a>${T.categorias.map((c) => `<a href="coleccion.html?cat=${encodeURIComponent(c.nombre)}">${esc(c.nombre)}</a>`).join("")}<a href="nosotros.html">Nosotros</a>`;
   const encabezado = () => `
     <div class="demo-cinta">Tienda de demostración, diseñada por <a href="../../index.html">Yeison</a>. No vende ni cobra.</div>
-    <div class="anuncio"><div class="anuncio-pista">${[...T.anuncios, ...T.anuncios].map((a) => `<span>${esc(a)}</span>`).join("")}</div></div>
+    <div class="anuncio"><div class="anuncio-pista">${Array(6).fill(T.anuncios).flat().map((a) => `<span>${esc(a)}</span>`).join("")}</div></div>
     <header class="cabecera">
       <button class="icono-btn solo-movil" data-abrir-menu aria-label="Abrir menú">${icono.menu}</button>
       <a class="logo" href="index.html" aria-label="${esc(T.nombre)}, inicio">${T.logo}</a>
@@ -334,7 +334,6 @@
   const checkout = () => `
     <section class="contenedor checkout">
       <div class="checkout-form">
-        <a class="logo" href="index.html">${T.logo}</a>
         <nav class="migas" aria-label="Pasos"><a href="#" data-abrir-carrito>Bolsa</a><span>/</span><b>Datos y pago</b></nav>
         <form data-pedido>
           <h2>Contacto</h2>
@@ -371,8 +370,7 @@
   // ---------- montar ----------
   const cuerpo = { inicio, coleccion, producto: productoHTML, checkout, nosotros }[pagina] || inicio;
   if (pagina !== "producto") document.title = `${T.nombre} | ${T.titulos[pagina] || T.eslogan}`;
-  app.innerHTML = pagina === "checkout" ? `<div class="demo-cinta">Tienda de demostración, diseñada por <a href="../../index.html">Yeison</a>. No vende ni cobra.</div>${cuerpo()}<aside class="panel carrito" aria-label="Tu bolsa"><div class="carrito-cont"></div></aside><div class="capa" data-cerrar></div><div class="aviso" role="status"></div>`
-    : `${encabezado()}<main>${cuerpo()}</main>${pie()}`;
+  app.innerHTML = `${encabezado()}<main>${cuerpo()}</main>${pie()}`;
 
   // ---------- comportamiento ----------
   function pintarContador() { const n = unidades(); $$(".contador").forEach((el) => { el.textContent = n; el.hidden = !n; }); }

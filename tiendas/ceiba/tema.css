@@ -27,3 +27,6 @@
 .opiniones { background: var(--superficie); }
 .ficha-info h1 { font-size: clamp(40px, 4.4vw, 60px); }
 @media (max-width: 720px) { .logo-txt { font-size: 38px; } }
+.chip { border-radius: 0; }
+.etiqueta { background: #fff; padding: 4px 9px; }
+.etiqueta.oferta { background: #fff; }

@@ -44,7 +44,7 @@ h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.035em; }
 .boton-grande { padding: 19px 34px; font-size: 18px; }
 
 /* vitrina de celulares */
-.vitrina { display: flex; justify-content: center; gap: clamp(14px, 3vw, 40px); padding: 10px 20px 0; overflow: hidden; }
+.vitrina { display: flex; justify-content: center; gap: clamp(14px, 3vw, 40px); padding: 56px 20px 40px; overflow: hidden; }
 .telefono { position: relative; display: block; width: clamp(200px, 24vw, 300px); aspect-ratio: 390 / 844; border-radius: 38px; border: 9px solid #111; background: #111; overflow: hidden; flex: 0 0 auto;
     box-shadow: 0 30px 60px -20px rgba(20, 20, 20, .35); text-decoration: none; transition: transform .35s cubic-bezier(.2, .8, .2, 1); }
 .telefono img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 29px; }

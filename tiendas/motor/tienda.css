@@ -22,7 +22,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .demo-cinta { background: #0d0d0d; color: #cfcfcf; font: 500 12px/1 var(--f-texto); text-align: center; padding: 8px 12px; letter-spacing: .02em; }
 .demo-cinta a { color: #f2a41c; text-decoration: none; font-weight: 700; }
 .anuncio { background: var(--anuncio-fondo); color: var(--anuncio-texto); overflow: hidden; font-size: 13px; letter-spacing: .04em; }
-.anuncio-pista { display: flex; gap: 64px; width: max-content; padding: 9px 0; animation: anuncio 38s linear infinite; }
+.anuncio-pista { display: flex; gap: 64px; width: max-content; padding: 9px 0; animation: anuncio 80s linear infinite; }
 .anuncio-pista span { white-space: nowrap; }
 @keyframes anuncio { to { transform: translateX(-50%); } }
 
@@ -350,7 +350,7 @@ details[open] > summary::after { transform: rotate(45deg); }
 @media (max-width: 800px) { .valores { grid-template-columns: 1fr; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .anuncio-pista, .hero-media img { animation: none; }
+  .hero-media img, .hero-fondos img { animation: none; }
   * { transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
 
@@ -565,3 +565,11 @@ details[open] > summary::after { transform: rotate(45deg); }
 .grilla > * { min-width: 0; }
 .tarjeta-bloque .tarjeta-rating span { white-space: nowrap; }
 @media (max-width: 720px) { .tarjeta-bloque .tarjeta { padding: 8px 8px 12px; } .tarjeta-bloque .tarjeta-nombre { font-size: 16px; } .tarjeta-bloque .tarjeta-rating { flex-wrap: wrap; } }
+
+.checkout-form > .migas { padding-top: 0; margin-bottom: 4px; }
+
+/* la sombra del panel solo cuando está abierto (antes se asomaba en el borde) */
+.panel { box-shadow: none; }
+body.ver-carrito .carrito, body.ver-menu .menu-movil { box-shadow: 0 0 60px rgba(0,0,0,.18); }
+.filtros-der > * { min-width: 0; }
+@media (max-width: 720px) { .filtros-der { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } .selector select { min-width: 0; } }
