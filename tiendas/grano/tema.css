@@ -1,0 +1,32 @@
+/* GRANO: verde hoja de cafeto, rojo cereza y amarillo de sello; grotesca gruesa, sin el crema de plantilla */
+:root {
+  --fondo: #fcfbf7; --superficie: #eef1e7; --tinta: #1f2a22; --suave: #5d6a60; --borde: #dfe4d6;
+  --acento: #1e4d3a; --acento-texto: #fcfbf7; --acento-fuerte: #c2412d; --estrella: #e0a526;
+  --anuncio-fondo: #c2412d; --anuncio-texto: #fff3ec; --pie-fondo: #1e4d3a; --pie-texto: #dfe9df;
+  --hero-fondo: #1e4d3a; --hero-tinta: #f5f1e6; --sello-fondo: #f2c94c; --sello-tinta: #1f2a22;
+  --ingredientes-fondo: #2b1e17; --ingredientes-tinta: #f3e9da;
+  --f-titulos: "Bricolage Grotesque", system-ui, sans-serif; --f-texto: "Manrope", system-ui, sans-serif;
+  --peso-titulos: 700; --tracking-titulos: -0.035em;
+  --radio: 24px; --radio-boton: 999px; --radio-foto: 18px;
+}
+.logo-txt { display: inline-flex; align-items: center; gap: 8px; font: 800 28px/1 var(--f-titulos); letter-spacing: -.04em; color: var(--acento); }
+.logo-txt i { width: 15px; height: 21px; border-radius: 50%; background: var(--acento-fuerte); position: relative; transform: rotate(18deg); }
+.logo-txt i::after { content: ""; position: absolute; left: 7px; top: 3px; bottom: 3px; width: 1.6px; background: var(--fondo); border-radius: 2px; transform: rotate(-10deg); }
+.pie .logo-txt { color: #fff; }
+.boton { font-weight: 700; }
+.hero-bloque .hero-texto h1 { font-size: clamp(46px, 6vw, 92px); line-height: .95; margin: 0 0 20px; }
+.hero-bloque .boton { background: var(--sello-fondo); border-color: var(--sello-fondo); color: var(--tinta); }
+.hero-bloque .boton-linea { background: transparent; color: var(--hero-tinta); border-color: var(--hero-tinta); }
+.hero-bloque .boton-linea:hover { background: var(--hero-tinta); color: var(--acento); }
+.seccion-cab h2 { font-size: clamp(32px, 4vw, 52px); }
+.beneficios { border: 0; }
+.beneficio-ico { background: var(--superficie); color: var(--acento); }
+.etiqueta { background: var(--sello-fondo); color: var(--tinta); }
+.etiqueta.oferta, .ahorro { background: var(--acento-fuerte); color: #fff; }
+.tarjeta-nombre { font: 700 19px/1.2 var(--f-titulos); letter-spacing: -.02em; }
+.tarjeta-precio { font-size: 17px; }
+.opiniones { background: #f7ead6; }
+.suscribir { background: var(--acento-fuerte); }
+.suscribir-form .boton { color: var(--acento-fuerte); }
+.chip.activo, .chip:hover { background: var(--acento); border-color: var(--acento); }
+.rutina-paso h3 { color: var(--acento); }

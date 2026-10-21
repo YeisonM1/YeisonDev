@@ -1,0 +1,29 @@
+/* CEIBA: blanco de revista, negro y un oliva discreto; serif editorial gigante y fotos sin bordes */
+:root {
+  --fondo: #ffffff; --superficie: #f1eee8; --tinta: #1b1b19; --suave: #6b6a64; --borde: #e4e0d8;
+  --acento: #1b1b19; --acento-texto: #ffffff; --acento-fuerte: #56603e; --estrella: #1b1b19;
+  --anuncio-fondo: #1b1b19; --anuncio-texto: #f1eee8; --pie-fondo: #1b1b19; --pie-texto: #d9d6cc;
+  --f-titulos: "Instrument Serif", Georgia, serif; --f-texto: "Inter Tight", system-ui, sans-serif;
+  --peso-titulos: 400; --tracking-titulos: -0.01em;
+  --radio: 0px; --radio-boton: 0px; --radio-foto: 0px; --ancho: 1360px;
+}
+.logo-txt { font: 400 46px/1 var(--f-titulos); letter-spacing: -.02em; color: var(--tinta); }
+.pie .logo-txt { color: #fff; }
+.boton { font-size: 14px; font-weight: 500; letter-spacing: .02em; }
+.hero-completo .hero-texto h1 { font-size: clamp(54px, 8vw, 128px); line-height: .92; }
+.hero-antetitulo { font-size: 15px; }
+.seccion-cab h2, .historia-texto h2, .coleccion-cab h1, .ficha-info h1 { line-height: 1; }
+.seccion-cab h2 { font-size: clamp(38px, 4.6vw, 64px); }
+.tarjeta-foto { aspect-ratio: 3/4; background: #f1eee8; }
+.galeria-principal img, .galeria-minis button { aspect-ratio: 3/4; }
+.tarjeta-nombre { font-weight: 500; font-size: 15px; }
+.etiqueta { background: transparent; color: var(--tinta); padding: 0; top: 14px; left: 14px; font-size: 12.5px; font-weight: 500; }
+.etiqueta.oferta { background: transparent; color: var(--acento-fuerte); }
+.ahorro { background: var(--acento-fuerte); }
+.variante { min-width: 52px; }
+.suscribir { background: var(--superficie); color: var(--tinta); }
+.suscribir-form input { border-color: var(--tinta); }
+.suscribir-form .boton { background: var(--tinta); color: #fff; border-color: var(--tinta); }
+.opiniones { background: var(--superficie); }
+.ficha-info h1 { font-size: clamp(40px, 4.4vw, 60px); }
+@media (max-width: 720px) { .logo-txt { font-size: 38px; } }

@@ -1,0 +1,25 @@
+/* SILLETA: rosa empolvado del frasco, vino tinto y Bodoni de perfumería clásica */
+:root {
+  --fondo: #fbf6f3; --superficie: #f3e5df; --tinta: #2b1b1e; --suave: #7a6467; --borde: #e8d8d2;
+  --acento: #6e2b37; --acento-texto: #fbf6f3; --acento-fuerte: #6e2b37; --estrella: #b5834a;
+  --anuncio-fondo: #6e2b37; --anuncio-texto: #f6e6e2; --pie-fondo: #2b1b1e; --pie-texto: #e3d2cf;
+  --f-titulos: "Bodoni Moda", Didot, Georgia, serif; --f-texto: "Jost", system-ui, sans-serif;
+  --peso-titulos: 500; --tracking-titulos: -0.015em;
+  --radio: 4px; --radio-boton: 2px; --radio-foto: 2px;
+}
+.logo-txt { font: 500 28px/1 var(--f-titulos); letter-spacing: .34em; margin-right: -.34em; color: var(--tinta); }
+.pie .logo-txt { color: #fff; }
+.boton { text-transform: uppercase; font-size: 13px; letter-spacing: .14em; font-weight: 500; }
+.hero { background: #f1ddd6; }
+.hero-texto h1 { font-weight: 400; font-size: clamp(42px, 5.6vw, 84px); }
+.hero-antetitulo { font: italic 400 20px var(--f-titulos); color: var(--acento); }
+.tarjeta-foto { background: #f1e2dc; }
+.tarjeta-nombre { font: 500 19px/1.25 var(--f-titulos); }
+.ficha-info h1 { font-weight: 400; }
+.ficha-cat { font: italic 400 17px var(--f-titulos); color: var(--acento); }
+.cats-tarjetas .categoria-nombre { font-weight: 400; font-size: 28px; }
+.etiqueta { border-radius: 2px; font-size: 12px; font-weight: 500; letter-spacing: .02em; }
+.chip { border-radius: 2px; }
+.opinion blockquote { font-style: italic; }
+.cita { border-top: 1px solid var(--borde); }
+.seccion-cab h2 { font-weight: 400; }
