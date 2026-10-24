@@ -1,0 +1,54 @@
+/* Dirección B, "App": alineada a la izquierda y con la demo ya en la primera pantalla. En computador el gancho y el
+   celular van lado a lado; en el celular la demo arranca justo debajo del botón. Las preguntas viven dentro del chat
+   como respuestas rápidas y el celular se para sobre una base azul niebla, como las tarjetas de una app. */
+
+/* ---------- inicio ---------- */
+.dir-b .inicio { padding-block: 22px 72px; }
+.dir-b .inicio-grid { display: grid; gap: 44px; }
+.dir-b .inicio-texto { display: grid; justify-items: start; gap: 20px; }
+.dir-b .inicio .titular { font-size: clamp(38px, 11vw, 96px); }
+.dir-b .linea-clave { font-size: 1.5em; line-height: .96; margin-block: .02em .05em; }
+.dir-b .inicio-apoyo { max-width: 26ch; font-size: clamp(17px, 4.6vw, 21px); }
+.dir-b .inicio-texto .pastilla { width: 100%; }
+
+/* el gancho ya está quieto en su lugar; el único momento es la insignia contando y el destello */
+.anima .dir-b .inicio-texto { animation: aparece .5s ease-out both; }
+
+/* ---------- Pruébalo tú ---------- */
+.dir-b .prueba { display: grid; justify-items: center; gap: 14px; }
+.dir-b .prueba-cab { justify-self: stretch; display: grid; gap: 4px; }
+.dir-b .prueba-cab h2 { font: 800 27px/1 var(--t); font-variation-settings: "opsz" 96; letter-spacing: -.035em; }
+.dir-b .pedestal { position: relative; isolation: isolate; display: grid; justify-items: center; width: 100%; padding-bottom: 22px; }
+.dir-b .pedestal::before { content: ""; position: absolute; inset: auto 0 0; height: 62%; z-index: -1; border-radius: 34px; background: var(--niebla); }
+.dir-b .cel { --ancho: min(300px, 80vw); --alto: 610px; }
+/* respuestas rápidas en una fila que se desliza de lado, como en los chats de verdad */
+.dir-b .chips { flex: none; display: flex; gap: 6px; padding: 9px 10px 13px; overflow-x: auto; scrollbar-width: none; border-top: 1px solid var(--borde); background: var(--papel); }
+.dir-b .chips::-webkit-scrollbar { display: none; }
+.dir-b .chip { flex: none; min-height: 34px; padding: 0 13px; border-color: transparent; background: var(--niebla); color: var(--cobalto); font-size: 13.5px; box-shadow: none; }
+.dir-b .chip.siguiente { box-shadow: inset 0 0 0 1.5px var(--cobalto); }
+.dir-b .demo-fin { display: grid; justify-items: center; gap: 10px; text-align: center; margin-top: 8px; }
+.dir-b .demo-fin .apoyo { font-size: 17px; }
+.dir-b .prueba-nota { text-align: center; max-width: 30ch; }
+
+@media (min-width: 1000px) {
+    .dir-b .logo img { height: 44px; }
+    .dir-b .inicio { padding-block: 26px 80px; }
+    .dir-b .inicio-grid { grid-template-columns: minmax(0, 1fr) 440px; align-items: center; gap: 56px; }
+    .dir-b .inicio .titular { font-size: clamp(60px, min(6.2vw, 9.8svh), 100px); }
+    .dir-b .inicio-texto { gap: 26px; padding-bottom: 40px; }
+    .dir-b .inicio-texto .pastilla { width: auto; }
+    .dir-b .prueba-cab { justify-self: center; text-align: center; }
+    .dir-b .cel { --ancho: 320px; --alto: 640px; padding: 11px; border-radius: 54px; }
+    .dir-b .cel-pantalla { border-radius: 45px; }
+    .dir-b .pedestal::before { height: 58%; border-radius: 40px; }
+    .dir-b .notificacion { width: calc(100% + 130px); top: 30%; padding: 17px 19px 18px; column-gap: 15px; border-radius: 27px; }
+    .dir-b .noti-app { width: 58px; height: 58px; border-radius: 16px; }
+    .dir-b .notificacion b { font-size: 22px; }
+    .dir-b .noti-detalle { font-size: 16.5px; }
+}
+
+/* movimiento reducido: todo aparece en su estado final con un fundido corto */
+@media (prefers-reduced-motion: reduce) {
+    .dir-b .inicio-texto, .dir-b .prueba { animation: aparece .45s ease-out both; }
+    .dir-b .prueba { animation-delay: .12s; }
+}
