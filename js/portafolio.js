@@ -79,11 +79,27 @@
     const estadoBase = estado.textContent;
     let ocupado = false, respondidas = 0, talla = "M", comprar = null;
 
-    const bajar = () => hilo.scrollTo({ top: hilo.scrollHeight, behavior: quieto() ? "auto" : "smooth" });
+    /* el chat baja solo hasta el final con cada mensaje. No usa el scroll suave del navegador (algunos celulares no lo
+       terminan en un contenedor sin barra y la respuesta quedaba cortada): persigue el final cuadro a cuadro, recalculándolo
+       cada vez, y si un mensaje cambia de alto después (la foto, la fuente) vuelve a bajar */
+    let persecucion = 0;
+    const bajar = (instantaneo = false) => {
+        cancelAnimationFrame(persecucion);
+        if (instantaneo || quieto()) { hilo.scrollTop = hilo.scrollHeight; return; }
+        const paso = () => {
+            const final = hilo.scrollHeight - hilo.clientHeight, falta = final - hilo.scrollTop;
+            if (falta <= 1) { hilo.scrollTop = final; return; }
+            hilo.scrollTop += Math.max(2, falta * .2);
+            persecucion = requestAnimationFrame(paso);
+        };
+        persecucion = requestAnimationFrame(paso);
+    };
+    const cambiaAlto = new ResizeObserver(() => bajar());
     const poner = (nodo, oculto = false) => {
         vacio.remove();
         hilo.append(nodo);
-        if (oculto) { nodo.style.visibility = "hidden"; hilo.scrollTop = hilo.scrollHeight; }
+        cambiaAlto.observe(nodo);
+        if (oculto) { nodo.style.visibility = "hidden"; bajar(true); }
         else { nodo.classList.add("entra"); bajar(); }
         return nodo;
     };
@@ -176,6 +192,8 @@
     }
 
     function reiniciar() {
+        cambiaAlto.disconnect();
+        cancelAnimationFrame(persecucion);
         hilo.querySelectorAll(".msj, .producto, .escribiendo").forEach((n) => n.remove());
         hilo.append(vacio);
         chips.forEach((c) => c.classList.remove("usada"));
