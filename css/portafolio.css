@@ -239,11 +239,18 @@ p { margin: 0; }
     .s4 .px:hover, .p-ceiba .px:hover { background-color: var(--tinta); color: #fff; }
 }
 
-/* sin movimiento: todo aparece quieto y en su sitio */
+/* movimiento reducido: nada se desplaza, se desenfoca ni rebota. La portada entra en el mismo orden y con los mismos
+   tiempos, pero cada pieza solo aparece con un fundido de opacidad; la palabra se queda fija en "precio" y no hay
+   destello ni tarjetas que se levantan. Estas son todas las animaciones de la hoja: si se agrega otra, va aquí. */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-    .palabras span:not(:first-child) { opacity: 0; }
+    *, *::before, *::after { transition: none !important; }
+    .linea, .lead, .acciones, .cel, .tile { animation-name: aparece; }
+    .tile { animation-timing-function: ease-out; }
+    .palabras span { animation: none; }
     .palabras span:first-child { opacity: 1; }
     .s4::after { display: none; }
+    .tarjeta:hover, .proyecto:hover, .chico:hover { translate: none; }
+    .px:active { transform: none; opacity: .82; }
 }
+@keyframes aparece { from { opacity: 0; } to { opacity: 1; } }
