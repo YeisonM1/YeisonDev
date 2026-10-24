@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yeison García | Tiendas online en Shopify y a medida</title>
-    <meta name="description" content="Diseño, monto y arreglo tiendas online para marcas colombianas de ropa, belleza y perfumería. Shopify y tiendas a medida, desde Medellín.">
+    <title>Yeison García | Tiendas online y respuestas automáticas en WhatsApp</title>
+    <meta name="description" content="Para negocios que venden por Instagram y WhatsApp: tienda propia en Shopify con el pedido armado a WhatsApp y un asistente con IA que contesta precio, tallas y envíos. Desde Medellín.">
     <meta name="theme-color" content="#f3f3f0">
-    <meta property="og:title" content="Yeison García | Tiendas online que venden">
-    <meta property="og:description" content="Mira las tiendas: perfumería, cosmética y moda. Shopify y tiendas a medida desde Medellín.">
-    <meta property="og:image" content="img/proyectos/ceiba_pc.webp">
+    <link rel="canonical" href="https://yeison-dev.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yeison-dev.vercel.app/">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:title" content="¿Se te va el día contestando “precio” por WhatsApp?">
+    <meta property="og:description" content="Te armo una tienda propia con el pedido armado a tu WhatsApp y, si quieres, un asistente que contesta por ti. Mira las tiendas y los precios.">
+    <meta property="og:image" content="https://yeison-dev.vercel.app/img/og-portada.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Portafolio de Yeison García: tiendas online y respuestas automáticas en WhatsApp">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%232742f5%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-weight=%27700%27 font-family=%27Arial%27 text-anchor=%27middle%27 fill=%27white%27%3EYG%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/portafolio.css?v=2">
+    <link rel="stylesheet" href="css/portafolio.css?v=3">
+    <script src="js/medir.js?v=1" defer></script>
 </head>
 <body>
 
@@ -22,22 +31,23 @@
             <a class="firma" href="#inicio">Yeison García</a>
             <nav class="menu" aria-label="Principal">
                 <a href="#tiendas">Tiendas</a>
-                <a href="#servicios">Servicios</a>
+                <a href="#respuestas">Respuestas automáticas</a>
+                <a href="#servicios">Precios</a>
                 <a href="#proceso">Cómo trabajo</a>
                 <a href="#contacto">Contacto</a>
             </nav>
-            <a class="pastilla" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20de%20mi%20tienda" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="pastilla" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20de%20mi%20negocio" target="_blank" rel="noopener" data-wa="barra">WhatsApp</a>
         </div>
     </header>
 
     <main>
         <section class="portada marco">
-            <h1>Hago tiendas online que dan confianza y venden.</h1>
+            <h1>¿Se te va el día contestando “precio” por WhatsApp?</h1>
             <div class="portada-pie">
-                <p>Diseño, monto y arreglo tiendas en Shopify y a medida para marcas colombianas de ropa, belleza y perfumería. Hablas directo conmigo, desde Medellín, sin agencia de por medio.</p>
+                <p>Te escriben por Instagram y WhatsApp para preguntar lo de siempre (el precio, si hay en su talla, si llega a su ciudad, a qué cuenta consignan), y entre mandar fotos y responder se te van las horas y más de una venta se enfría porque no alcanzaste a contestar. Yo te armo una tienda propia donde el cliente ve todo y el pedido te llega completo al WhatsApp, y si quieres, un asistente que contesta por ti mientras atiendes lo demás.</p>
                 <div class="acciones">
-                    <a class="boton" href="#tiendas">Ver las tiendas</a>
-                    <a class="boton boton-claro" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20quiero%20mejorar%20mi%20tienda%20online" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+                    <a class="boton" href="#tiendas">Probar una tienda</a>
+                    <a class="boton boton-claro" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20vendo%20por%20Instagram%20y%20WhatsApp%20y%20quiero%20ordenar%20mis%20pedidos" target="_blank" rel="noopener" data-wa="portada">Escríbeme por WhatsApp</a>
                 </div>
             </div>
         </section>
@@ -51,7 +61,7 @@
         <section class="seccion marco" id="tiendas">
             <div class="seccion-cab">
                 <h2>Tiendas</h2>
-                <p>Tres tiendas completas que puedes recorrer como cliente: catálogo con filtros, ficha de producto con variantes y reseñas, bolsa, checkout y página de marca. Cada una con su propia estructura, no una plantilla con otros colores. Y una tienda real en Shopify.</p>
+                <p>Arranco con una tienda real en Shopify y después vienen tres de demostración que puedes recorrer como si fueras cliente: escoges productos, llenas tus datos y el pedido sale armado hacia WhatsApp, tal como le llegaría al dueño de la tienda. Cada una tiene su propia estructura, porque no es una plantilla con otros colores.</p>
             </div>
 
             <article class="proyecto">
@@ -121,36 +131,110 @@
             </article>
         </section>
 
+        <section class="seccion respuestas" id="respuestas">
+            <div class="marco">
+                <div class="seccion-cab">
+                    <h2>Respuestas automáticas en WhatsApp</h2>
+                    <p>Es un asistente con inteligencia artificial conectado al WhatsApp de tu negocio, que contesta las preguntas de siempre con la información de tu catálogo, toma el pedido y te pasa la conversación cuando hace falta una persona. Es un servicio nuevo, así que todavía no tengo casos para mostrarte, y por eso aquí te explico cómo funciona en vez de prometerte números.</p>
+                </div>
+                <div class="flujo">
+                    <ol class="pasos pasos-col">
+                        <li><h3>Tu cliente escribe</h3><p>Pregunta lo de siempre: cuánto vale, si hay en su talla, si llega a su ciudad y cuánto se demora.</p></li>
+                        <li><h3>El asistente busca en tu catálogo</h3><p>Contesta con los precios, las tallas y la disponibilidad que tienes en la tienda, así que cuando cambias un precio allá, la respuesta cambia también.</p></li>
+                        <li><h3>Toma el pedido</h3><p>Le pide al cliente su nombre, ciudad, dirección y forma de pago, y te deja el pedido armado igual que en las tiendas de arriba.</p></li>
+                        <li><h3>Te pasa la conversación</h3><p>Si el cliente tiene un reclamo, pide algo especial o el asistente no tiene la respuesta, te avisa para que sigas tú.</p></li>
+                    </ol>
+                    <figure class="chat">
+                        <div class="chat-cab"><b>Tienda de ropa</b><span>Conversación de ejemplo</span></div>
+                        <div class="chat-cuerpo">
+                            <p class="msj msj-cliente">Hola, cuánto vale la camisa de lino blanca?</p>
+                            <p class="msj">¡Hola! La camisa de lino blanca está en $189.000 y la tengo en tallas S, M y L. ¿Qué talla usas?</p>
+                            <p class="msj msj-cliente">M, y hacen envíos a Pereira?</p>
+                            <p class="msj">Sí, a Pereira llega en 2 a 4 días y puedes pagar contraentrega. Si quieres te la separo, solo necesito tu nombre y la dirección de entrega.</p>
+                            <p class="msj msj-cliente">Laura Gómez, carrera 8 # 21-30, Pereira</p>
+                            <p class="msj">Listo, Laura, quedó así: 1 camisa de lino blanca talla M por $189.000 más envío, pago contraentrega. Ya le pasé tu pedido a la tienda para que lo despachen.</p>
+                        </div>
+                        <figcaption>Es un ejemplo para que veas cómo funciona: los precios, las tallas y los tiempos de envío los saca del catálogo de cada tienda.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
         <section class="seccion servicios" id="servicios">
             <div class="marco">
                 <div class="seccion-cab">
                     <h2>Servicios y precios</h2>
-                    <p>Precios en pesos colombianos. Trabajo con el 50 % para empezar y el 50 % al entregar.</p>
+                    <p>Los precios están en pesos colombianos y trabajo con el 50 % para empezar y el 50 % al entregar, así que no pagas todo antes de ver tu tienda funcionando.</p>
                 </div>
                 <div class="lista-servicios">
+                    <article class="servicio">
+                        <h3>Tienda Inicio</h3>
+                        <p class="precio">$1.200.000</p>
+                        <p>Es para cuando ya vendes por chat y quieres tu propia tienda sin complicarte: la monto en Shopify con una plantilla adaptada a tu marca y la dejo lista para que el pedido te llegue armado al WhatsApp.</p>
+                        <ul class="incluye">
+                            <li>Hasta 30 productos cargados</li>
+                            <li>Pedido armado a tu WhatsApp</li>
+                            <li>Contraentrega y pagos con Wompi</li>
+                            <li>Tu dominio conectado</li>
+                            <li>Una sesión para que aprendas a subir productos</li>
+                        </ul>
+                        <p class="nota">Shopify cobra aparte su mensualidad, que en el plan básico está en unos US$25 a 29 al mes y se le paga directo a ellos.</p>
+                        <a class="enlace" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesa%20la%20Tienda%20Inicio" target="_blank" rel="noopener" data-wa="servicio-inicio">Preguntar por esta tienda</a>
+                    </article>
+                    <article class="servicio">
+                        <h3>Tienda Completa</h3>
+                        <p class="precio"><small>desde</small> $2.400.000</p>
+                        <p>Cuando tu catálogo ya es grande y tu marca necesita verse a su nivel, diseño la tienda a la medida, como las que viste arriba, y la dejo lista para crecer.</p>
+                        <ul class="incluye">
+                            <li>Todo lo de la Tienda Inicio</li>
+                            <li>Diseño a la medida de tu marca</li>
+                            <li>Hasta 100 productos cargados</li>
+                            <li>Políticas de envíos, cambios y privacidad</li>
+                            <li>Analítica para saber qué se vende y de dónde llegan</li>
+                            <li>Velocidad revisada en el celular</li>
+                        </ul>
+                        <p class="nota">Si la tienda va en Shopify, la mensualidad de la plataforma también va aparte.</p>
+                        <a class="enlace" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesa%20la%20Tienda%20Completa" target="_blank" rel="noopener" data-wa="servicio-completa">Preguntar por esta tienda</a>
+                    </article>
+                    <article class="servicio">
+                        <h3>Respuestas automáticas en WhatsApp</h3>
+                        <p class="precio">$1.200.000</p>
+                        <p class="mensual">de instalación y $250.000 al mes</p>
+                        <p>Instalo el asistente en el WhatsApp de tu negocio y lo conecto al catálogo de tu tienda, para que conteste precio, tallas, envío y disponibilidad, tome el pedido y te pase la conversación cuando hace falta.</p>
+                        <p class="nota">La mensualidad incluye la IA, el servidor y los ajustes. Los mensajes de WhatsApp los cobra Meta directamente a tu negocio, pero contestarle a un cliente que te escribió primero no tiene costo durante las 24 horas siguientes a su mensaje.</p>
+                        <a class="enlace" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesan%20las%20respuestas%20autom%C3%A1ticas%20en%20WhatsApp" target="_blank" rel="noopener" data-wa="servicio-respuestas">Preguntar por el asistente</a>
+                    </article>
+                    <article class="servicio servicio-fuerte">
+                        <h3>Tienda y respuestas automáticas</h3>
+                        <p class="precio">$2.200.000</p>
+                        <p class="mensual">de instalación y $250.000 al mes</p>
+                        <p>La Tienda Inicio y el asistente juntos, así el cliente pregunta, el asistente le contesta con tu catálogo y el pedido te llega armado, y te ahorras $200.000 frente a contratarlos por separado.</p>
+                        <p class="nota">Aplican las mismas aclaraciones de Shopify y de Meta que en los dos servicios por separado.</p>
+                        <a class="enlace" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesa%20el%20combo%20de%20tienda%20y%20respuestas%20autom%C3%A1ticas" target="_blank" rel="noopener" data-wa="servicio-combo">Preguntar por el combo</a>
+                    </article>
+                </div>
+
+                <div class="fundador">
+                    <h3>Precio de fundador</h3>
+                    <p>Los 3 primeros clientes tienen un 25 % menos a cambio de un testimonio y de dejarme mostrar su caso aquí, porque prefiero arrancar con negocios reales que con promesas.</p>
+                    <a class="boton" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20quiero%20uno%20de%20los%20cupos%20con%20precio%20de%20fundador" target="_blank" rel="noopener" data-wa="fundador">Quiero uno de los cupos</a>
+                </div>
+
+                <h3 class="servicios-sub">Si ya tienes tienda</h3>
+                <div class="lista-servicios lista-dos">
                     <article class="servicio">
                         <h3>Ajustes y cambios pequeños</h3>
                         <p class="precio">$350.000</p>
                         <p>Cambios puntuales en la tienda que ya tienes: textos, banners, botones, colores, una sección nueva, las reseñas o ese error que no te deja vender. Me dices qué quieres cambiar y te confirmo antes de empezar.</p>
                         <p class="plazo">Listo en 1 a 3 días</p>
+                        <a class="enlace" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20necesito%20unos%20ajustes%20en%20mi%20tienda" target="_blank" rel="noopener" data-wa="servicio-ajustes">Pedir un ajuste</a>
                     </article>
-                    <article class="servicio servicio-fuerte">
+                    <article class="servicio">
                         <h3>Revisión completa de la tienda</h3>
                         <p class="precio">$650.000</p>
                         <p>Recorro tu tienda completa desde el celular como un cliente: textos, reseñas, confianza, carrito y todo lo que hace que alguien no termine la compra. Te entrego lo que encuentre y lo dejo arreglado.</p>
                         <p class="plazo">Lista en 5 días</p>
-                    </article>
-                    <article class="servicio">
-                        <h3>Tienda nueva</h3>
-                        <p class="precio precio-texto">Según tu catálogo</p>
-                        <p>Shopify o tienda a medida, con tu marca, tus productos cargados, pagos, envíos y contraentrega. Como las tiendas de arriba, hecha para tu negocio.</p>
-                        <p class="plazo">Te cotizo en el mismo día</p>
-                    </article>
-                    <article class="servicio">
-                        <h3>Fotos y video de producto</h3>
-                        <p class="precio precio-texto">Desde el catálogo</p>
-                        <p>Fotos de campaña, videos cortos y modelo propia para tu marca, sin estudio ni sesión. Tu producto tiene que salir idéntico al real.</p>
-                        <a class="enlace" href="https://yeisonm1.github.io/catalogo/" target="_blank" rel="noopener">Ver el catálogo</a>
+                        <a class="enlace" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20quiero%20la%20revisi%C3%B3n%20completa%20de%20mi%20tienda" target="_blank" rel="noopener" data-wa="servicio-revision">Pedir la revisión</a>
                     </article>
                 </div>
             </div>
@@ -161,9 +245,9 @@
                 <h2>Cómo trabajo</h2>
             </div>
             <ol class="pasos">
-                <li><h3>Me escribes</h3><p>Me mandas el link de tu tienda o me cuentas qué vendes. Por WhatsApp, sin formularios largos.</p></li>
-                <li><h3>Te muestro qué cambiaría</h3><p>Reviso tu tienda desde el celular y te mando un video corto con lo que encontré. Gratis.</p></li>
-                <li><h3>Acordamos y arranco</h3><p>Precio y fecha cerrados. Me agregas como colaborador en Shopify: nunca te pido tu contraseña.</p></li>
+                <li><h3>Me escribes</h3><p>Me mandas el link de tu tienda o de tu Instagram y me cuentas qué vendes, todo por WhatsApp y sin formularios largos.</p></li>
+                <li><h3>Te muestro qué haría</h3><p>Reviso tu tienda o tu Instagram desde el celular y te mando gratis un video corto con lo que cambiaría.</p></li>
+                <li><h3>Acordamos y arranco</h3><p>Cerramos precio y fecha, y me agregas como colaborador en Shopify, así que nunca te pido tu contraseña.</p></li>
                 <li><h3>Revisas y pagas el resto</h3><p>Lo pruebas en tu celular, pides ajustes y pagas el 50 % final cuando quedas contento.</p></li>
             </ol>
         </section>
@@ -171,16 +255,16 @@
         <section class="seccion sobre marco">
             <h2>Sobre mí</h2>
             <div class="sobre-texto">
-                <p>Soy Yeison García, desarrollador web en Medellín. Trabajo con Shopify, HTML, CSS y JavaScript, y produzco las fotos y videos de producto con 3D e inteligencia artificial.</p>
-                <p>Me enfoco en marcas pequeñas y medianas que venden por Instagram y WhatsApp y quieren que su tienda se vea al nivel de su producto. Prefiero pocos clientes bien atendidos a muchos a medias.</p>
+                <p>Soy Yeison García, desarrollador web en Medellín. Trabajo con Shopify, HTML, CSS y JavaScript, armo asistentes con IA para WhatsApp y produzco las fotos y videos de producto con 3D e inteligencia artificial.</p>
+                <p>Me enfoco en negocios pequeños y medianos que venden por Instagram y WhatsApp y quieren que su tienda se vea al nivel de su producto, y prefiero pocos clientes bien atendidos que muchos a medias.</p>
             </div>
         </section>
 
         <section class="contacto" id="contacto">
             <div class="marco contacto-int">
-                <h2>¿Hablamos de tu tienda?</h2>
-                <p>Mándame el link y te digo en un video corto qué cambiaría. Sin compromiso.</p>
-                <a class="boton boton-grande" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20este%20es%20el%20link%20de%20mi%20tienda%3A%20" target="_blank" rel="noopener">Escribirme por WhatsApp</a>
+                <h2>¿Hablamos de tu negocio?</h2>
+                <p>Mándame el link de tu tienda o de tu Instagram y te digo en un video corto qué haría, sin compromiso.</p>
+                <a class="boton boton-grande" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20este%20es%20el%20link%20de%20mi%20tienda%20o%20de%20mi%20Instagram%3A%20" target="_blank" rel="noopener" data-wa="contacto">Escribirme por WhatsApp</a>
                 <div class="redes">
                     <a href="https://www.instagram.com/mesa24g/" target="_blank" rel="noopener">Instagram</a>
                     <a href="https://www.tiktok.com/@mesa24g" target="_blank" rel="noopener">TikTok</a>

@@ -1,7 +1,7 @@
 /* Motor de tiendas de demostración (Yeison). Un solo código para las 3 marcas: cada tienda trae su datos.js (TIENDA)
    con su diseño (cabecera, portada, tarjetas, ficha y orden de secciones) y su tema.css; aquí se arma todo: encabezado,
-   portada, catálogo con filtros, producto con reseñas, carrito, búsqueda, checkout de muestra (no cobra ni envía datos)
-   y páginas de marca. Sin librerías. */
+   portada, catálogo con filtros, producto con reseñas, carrito, búsqueda, checkout de muestra (no cobra: arma el pedido
+   y lo abre en WhatsApp, como le llegaría al dueño de la tienda) y páginas de marca. Sin librerías. */
 (() => {
   const T = window.TIENDA;
   const D = { cabecera: "centrada", hero: "dividido", tarjeta: "clasica", ficha: "carrusel", categorias: "tarjetas", inicio: ["hero", "beneficios", "categorias", "destacados", "historia", "nuevos", "opiniones", "galeria"], ...T.diseno };
@@ -18,6 +18,8 @@
   const plata = (n) => "$" + Math.round(n).toLocaleString("es-CO");
   const coma = (n) => n.toFixed(1).replace(".", ",");
   const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  // enlace a WhatsApp que se abre aparte y se mide por origen (ver js/medir.js)
+  const waLink = (texto, origen) => `href="https://wa.me/${WA}${texto ? `?text=${encodeURIComponent(texto)}` : ""}" target="_blank" rel="noopener" data-wa="demo-${T.id}-${origen}"`;
   const producto = (id) => T.productos.find((p) => p.id === id);
   const descuento = (p) => (p.antes ? Math.round((1 - p.precio / p.antes) * 100) : 0);
   const estrellas = (r, tam = 14) => {
@@ -131,15 +133,15 @@
     <footer class="pie">
       <div class="contenedor pie-grid">
         <div class="pie-marca"><span class="logo">${T.logo}</span><p>${esc(T.pieTexto)}</p>
-          <div class="redes"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="https://wa.me/${WA}" aria-label="WhatsApp">WA</a></div></div>
+          <div class="redes"><span title="Instagram de la marca (demostración)">IG</span><span title="TikTok de la marca (demostración)">TT</span><a ${waLink("", "pie-icono")} aria-label="WhatsApp">WA</a></div></div>
         <div><h3>Tienda</h3>${T.categorias.map((c) => `<a href="coleccion.html?cat=${encodeURIComponent(c.nombre)}">${esc(c.nombre)}</a>`).join("")}<a href="coleccion.html">Ver todo</a></div>
-        <div><h3>Ayuda</h3><a href="nosotros.html#preguntas">Envíos y entregas</a><a href="nosotros.html#preguntas">Cambios y garantía</a><a href="nosotros.html#preguntas">Métodos de pago</a><a href="https://wa.me/${WA}">Escríbenos</a></div>
+        <div><h3>Ayuda</h3><a href="nosotros.html#preguntas">Envíos y entregas</a><a href="nosotros.html#preguntas">Cambios y garantía</a><a href="nosotros.html#preguntas">Métodos de pago</a><a ${waLink("", "pie-escribenos")}>Escríbenos</a></div>
         <div><h3>${esc(T.nombre)}</h3><a href="nosotros.html">Nuestra historia</a><p class="pie-dato">${esc(T.ciudad)}</p><p class="pie-dato">Envíos a toda Colombia</p></div>
       </div>
       <div class="contenedor pie-pagos"><span>Contraentrega</span><span>Addi</span><span>PSE</span><span>Tarjetas</span><span>Nequi</span></div>
       <div class="contenedor pie-legal">© 2026 ${esc(T.nombre)}. Marca y tienda de demostración, diseño y desarrollo por <a href="../../index.html">Yeison</a>.</div>
     </footer>
-    <a class="wa-flotante" href="https://wa.me/${WA}?text=${encodeURIComponent(`Hola Yeison, vi la tienda de demostración ${T.nombre} y quiero una así`)}" aria-label="Escribir por WhatsApp">${icono.wa}</a>`;
+    <a class="wa-flotante" ${waLink(`Hola Yeison, vi la tienda de demostración ${T.nombre} y quiero una así`, "flotante")} aria-label="Escribir por WhatsApp">${icono.wa}</a>`;
 
   // ---------- secciones de la portada (cada tienda elige cuáles y en qué orden) ----------
   const resenasTop = () => T.productos.flatMap((p) => p.resenas.map((r) => ({ ...r, producto: p }))).filter((r) => r.estrellas === 5 && r.texto.length > 60).slice(0, 6);
@@ -243,8 +245,8 @@
       </div></section>`,
     galeria: () => `
       <section class="seccion contenedor galeria-insta">
-        <div class="seccion-cab"><h2>${esc(T.textos.galeria)}</h2><a class="ver-todo" href="#">${esc(T.instagram)}</a></div>
-        <div class="insta">${T.galeria.map((g) => `<a href="#" aria-label="Publicación de Instagram"><img src="${g}" alt="" loading="lazy"></a>`).join("")}</div>
+        <div class="seccion-cab"><h2>${esc(T.textos.galeria)}</h2><span class="insta-usuario">${esc(T.instagram)}</span></div>
+        <div class="insta">${T.galeria.map((g) => `<span><img src="${g}" alt="" loading="lazy"></span>`).join("")}</div>
       </section>`,
   };
   const inicio = () => D.inicio.map((k) => S[k]()).join("");
@@ -299,7 +301,7 @@
             <div class="cantidad"><button data-cant="-1" aria-label="Menos">${icono.menos}</button><input value="1" inputmode="numeric" aria-label="Cantidad"><button data-cant="1" aria-label="Más">${icono.mas}</button></div>
             <button class="boton boton-grande" data-agregar-ficha="${p.id}">Agregar a la bolsa</button>
           </div>
-          <a class="boton boton-wa" href="https://wa.me/${WA}?text=${encodeURIComponent(`Hola Yeison, vi ${p.nombre} en la tienda de demostración ${T.nombre}`)}">${icono.wa} Comprar por WhatsApp</a>
+          <a class="boton boton-wa" ${waLink(`Hola Yeison, vi ${p.nombre} en la tienda de demostración ${T.nombre}`, "producto")}>${icono.wa} Comprar por WhatsApp</a>
           <ul class="garantias">
             <li>${icono.camion}<span><b>Envío gratis</b> desde ${plata(T.envioGratis)}, llega en 2 a 4 días</span></li>
             <li>${icono.billete}<span><b>Paga al recibir</b> en toda Colombia</span></li>
@@ -337,29 +339,53 @@
         <nav class="migas" aria-label="Pasos"><a href="#" data-abrir-carrito>Bolsa</a><span>/</span><b>Datos y pago</b></nav>
         <form data-pedido>
           <h2>Contacto</h2>
-          <label class="campo"><span>Celular (WhatsApp)</span><input required inputmode="tel" placeholder="300 000 0000"></label>
-          <label class="campo"><span>Correo (opcional)</span><input type="email" placeholder="tucorreo@ejemplo.com"></label>
+          <label class="campo"><span>Celular (WhatsApp)</span><input name="celular" required inputmode="tel" autocomplete="tel" placeholder="300 000 0000"></label>
+          <label class="campo"><span>Correo (opcional)</span><input name="correo" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com"></label>
           <h2>Entrega</h2>
-          <div class="campos-2"><label class="campo"><span>Nombre</span><input required></label><label class="campo"><span>Apellido</span><input required></label></div>
-          <label class="campo"><span>Dirección</span><input required placeholder="Calle, número, barrio"></label>
-          <div class="campos-2"><label class="campo"><span>Ciudad</span><input required placeholder="Medellín"></label><label class="campo"><span>Departamento</span><input required placeholder="Antioquia"></label></div>
+          <div class="campos-2"><label class="campo"><span>Nombre</span><input name="nombre" required autocomplete="given-name"></label><label class="campo"><span>Apellido</span><input name="apellido" required autocomplete="family-name"></label></div>
+          <label class="campo"><span>Dirección</span><input name="direccion" required autocomplete="street-address" placeholder="Calle, número, barrio"></label>
+          <div class="campos-2"><label class="campo"><span>Ciudad</span><input name="ciudad" required autocomplete="address-level2" placeholder="Medellín"></label><label class="campo"><span>Departamento</span><input name="departamento" required autocomplete="address-level1" placeholder="Antioquia"></label></div>
           <h2>Pago</h2>
           <div class="pagos">
-            <label class="pago"><input type="radio" name="pago" checked><span><b>Pago contraentrega</b><small>Pagas en efectivo cuando recibes</small></span></label>
-            <label class="pago"><input type="radio" name="pago"><span><b>Addi</b><small>Hasta 4 cuotas sin interés</small></span></label>
-            <label class="pago"><input type="radio" name="pago"><span><b>PSE, tarjeta o Nequi</b><small>Pago en línea seguro</small></span></label>
+            <label class="pago"><input type="radio" name="pago" value="Contraentrega (efectivo al recibir)" checked><span><b>Pago contraentrega</b><small>Pagas en efectivo cuando recibes</small></span></label>
+            <label class="pago"><input type="radio" name="pago" value="Addi (cuotas)"><span><b>Addi</b><small>Hasta 4 cuotas sin interés</small></span></label>
+            <label class="pago"><input type="radio" name="pago" value="Pago en línea (PSE, tarjeta o Nequi)"><span><b>PSE, tarjeta o Nequi</b><small>Pago en línea seguro</small></span></label>
           </div>
-          <button class="boton boton-grande boton-ancho">Confirmar pedido</button>
-          <p class="nota-demo">Esta es una tienda de demostración: el pedido no se cobra ni se envía a ningún lado.</p>
+          <button class="boton boton-grande boton-ancho">${icono.wa} Enviar pedido por WhatsApp</button>
+          <p class="nota-demo">Es una tienda de demostración, así que no se cobra nada y el pedido llega a mi WhatsApp para que veas cómo lo recibiría el dueño de la tienda.</p>
         </form>
       </div>
       <aside class="checkout-resumen"><h2>Tu pedido</h2><div class="resumen-cont"></div></aside>
     </section>
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tit"><div class="modal-caja">
-      <span class="modal-ico">${icono.check}</span><h2 id="modal-tit">¡Pedido de demostración listo!</h2>
-      <p>Así recibiría el pedido tu cliente: confirmación inmediata y aviso por WhatsApp. Esta tienda es una muestra hecha por Yeison.</p>
-      <a class="boton" href="https://wa.me/${WA}?text=${encodeURIComponent(`Hola Yeison, probé el checkout de ${T.nombre} y quiero una tienda así`)}">Quiero una tienda así</a>
-      <a class="boton boton-linea" href="index.html">Volver a la tienda</a></div></div>`;
+      <span class="modal-ico">${icono.check}</span><h2 id="modal-tit">Tu pedido salió para WhatsApp</h2>
+      <p>Así le llega al dueño de la tienda, con todo lo que necesita para despachar y sin tener que preguntarle nada más al cliente.</p>
+      <pre class="modal-msj"></pre>
+      <a class="boton" data-abrir-pedido target="_blank" rel="noopener" data-wa="demo-${T.id}-pedido-reabrir">${icono.wa} Abrir el pedido en WhatsApp</a>
+      <a class="boton boton-linea" ${waLink(`Hola Yeison, probé el checkout de ${T.nombre} y quiero una tienda así`, "pedido-quiero")}>Quiero una tienda así</a>
+      <a class="ver-todo" href="index.html">Volver a la tienda</a></div></div>`;
+
+  // pedido armado para WhatsApp: productos con su variante, cantidades, total y datos de entrega
+  const mensajePedido = (d) => {
+    const c = leer(); const sub = subtotal(c); const envio = sub >= T.envioGratis ? 0 : T.costoEnvio;
+    const lineas = c.map((x, i) => {
+      const p = producto(x.id);
+      const detalle = [x.variante ? `${p.variantes ? p.variantes.nombre : "Opción"}: ${x.variante}` : "", `Cantidad: ${x.cant}`, plata(p.precio * x.cant)].filter(Boolean).join(" · ");
+      return `*${i + 1}. ${p.nombre}*\n${detalle}`;
+    });
+    return [
+      `Hola ${T.nombre}, quiero hacer este pedido:`, "",
+      lineas.join("\n\n"), "",
+      `Subtotal: ${plata(sub)}`, `Envío: ${envio ? plata(envio) : "Gratis"}`, `*Total: ${plata(sub + envio)}*`, "",
+      `*Nombre:* ${d.get("nombre")} ${d.get("apellido")}`,
+      `*Celular:* ${d.get("celular")}`,
+      `*Ciudad:* ${d.get("ciudad")}, ${d.get("departamento")}`,
+      `*Dirección:* ${d.get("direccion")}`,
+      d.get("correo") ? `*Correo:* ${d.get("correo")}` : null,
+      `*Forma de pago:* ${d.get("pago")}`, "",
+      `(Pedido de prueba en la tienda de demostración ${T.nombre})`,
+    ].filter((l) => l !== null).join("\n");
+  };
 
   const nosotros = () => `
     <section class="nosotros-hero"><img src="${T.nosotros.imagen}" alt=""><div class="contenedor"><h1>${esc(T.nosotros.titulo)}</h1></div></section>
@@ -434,7 +460,15 @@
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") cerrarTodo(); });
   document.addEventListener("submit", (e) => {
     if (e.target.matches("[data-suscribir]")) { e.preventDefault(); e.target.reset(); aviso("¡Listo! Te avisaremos de lanzamientos (demostración)."); }
-    if (e.target.matches("[data-pedido]")) { e.preventDefault(); if (!leer().length) { aviso("Agrega un producto a la bolsa primero."); return; } guardar([]); pintarCarrito(); $(".modal").classList.add("ver"); }
+    if (e.target.matches("[data-pedido]")) {
+      e.preventDefault(); if (!leer().length) { aviso("Agrega un producto a la bolsa primero."); return; }
+      const texto = mensajePedido(new FormData(e.target));
+      const url = `https://wa.me/${WA}?text=${encodeURIComponent(texto)}`;
+      $(".modal-msj").textContent = texto; $("[data-abrir-pedido]").href = url;
+      if (window.medirWhatsApp) window.medirWhatsApp(`demo-${T.id}-pedido`);
+      const w = window.open(url, "_blank"); if (w) w.opener = null;
+      guardar([]); pintarCarrito(); $(".modal").classList.add("ver");
+    }
   });
   const bi = $(".busqueda input");
   if (bi) bi.addEventListener("input", () => {
