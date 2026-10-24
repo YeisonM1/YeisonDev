@@ -100,7 +100,7 @@ body.ver-busqueda .busqueda { transform: none; }
 .boton-grande { padding: 17px 30px; font-size: 16px; }
 .boton-ancho { width: 100%; }
 .boton-wa { width: 100%; margin-top: 10px; background: #25d366; border-color: #25d366; color: #fff; }
-.boton-wa svg { width: 20px; height: 20px; }
+.boton-wa svg, .boton svg { width: 20px; height: 20px; flex: 0 0 auto; }
 
 /* portada */
 .hero { position: relative; display: grid; grid-template-columns: 1.1fr 1fr; min-height: min(86vh, 780px); background: var(--superficie); }
@@ -182,9 +182,10 @@ body.ver-busqueda .busqueda { transform: none; }
 
 /* galería tipo Instagram */
 .insta { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
-.insta a { overflow: hidden; border-radius: calc(var(--radio-foto) / 2); aspect-ratio: 1; }
+.insta > span { overflow: hidden; border-radius: calc(var(--radio-foto) / 2); aspect-ratio: 1; }
 .insta img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
-.insta a:hover img { transform: scale(1.08); }
+.insta > span:hover img { transform: scale(1.08); }
+.insta-usuario { font-weight: 600; font-size: 15px; color: var(--suave); }
 @media (max-width: 720px) { .insta { grid-template-columns: repeat(3, 1fr); } }
 
 /* suscripción y pie */
@@ -204,7 +205,7 @@ body.ver-busqueda .busqueda { transform: none; }
 .pie .logo { color: #fff; margin-bottom: 14px; justify-content: flex-start; }
 .pie-marca p { max-width: 36ch; opacity: .75; margin: 0 0 18px; }
 .redes { display: flex; gap: 10px; }
-.redes a { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; font-size: 12px; font-weight: 700; padding: 0; }
+.redes a, .redes span { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; font-size: 12px; font-weight: 700; padding: 0; }
 .pie-dato { margin: 5px 0; opacity: .75; }
 .pie-pagos { display: flex; gap: 10px; flex-wrap: wrap; padding: 20px 0; border-top: 1px solid rgba(255,255,255,.12); }
 .pie-pagos span { padding: 6px 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 6px; font-size: 12px; letter-spacing: .04em; }
@@ -325,10 +326,11 @@ details[open] > summary::after { transform: rotate(45deg); }
 @media (max-width: 900px) { .checkout { grid-template-columns: 1fr; } .checkout-resumen { position: static; order: -1; } }
 .modal { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: rgba(0,0,0,.45); opacity: 0; pointer-events: none; transition: opacity .3s; padding: 20px; }
 .modal.ver { opacity: 1; pointer-events: auto; }
-.modal-caja { background: var(--fondo); border-radius: 22px; padding: 40px 32px; max-width: 460px; text-align: center; display: grid; gap: 14px; justify-items: center;
+.modal-caja { background: var(--fondo); border-radius: 22px; padding: 40px 32px; width: 100%; max-width: 460px; max-height: calc(100vh - 40px); overflow: auto; text-align: center; display: grid; gap: 14px; justify-items: center;
   transform: scale(.94); transition: transform .35s cubic-bezier(.2,.8,.2,1); }
 .modal.ver .modal-caja { transform: none; }
 .modal-caja p { color: var(--suave); margin: 0 0 8px; }
+.modal-msj { width: 100%; max-height: 34vh; overflow: auto; margin: 0 0 6px; padding: 14px 16px; border-radius: 12px; background: var(--superficie); text-align: left; white-space: pre-wrap; font-family: inherit; font-size: 13.5px; line-height: 1.5; }
 .modal-ico { width: 64px; height: 64px; border-radius: 50%; background: #e8f5ee; color: #1f7a46; display: grid; place-items: center; }
 .modal-ico svg { width: 32px; }
 
