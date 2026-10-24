@@ -4,302 +4,339 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yeison García | Tiendas online y respuestas automáticas en WhatsApp</title>
-    <meta name="description" content="Para negocios que venden por Instagram y WhatsApp: tienda propia en Shopify con el pedido armado a WhatsApp y un asistente con IA que contesta precio, tallas y envíos. Desde Medellín.">
+    <meta name="description" content="Para negocios que venden por Instagram y WhatsApp: te armo una tienda online que contesta precio, tallas y envíos por ti y te pasa el pedido listo a WhatsApp. Desde Medellín.">
     <meta name="theme-color" content="#F4F1EA">
     <link rel="canonical" href="https://yeison-dev.vercel.app/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yeison-dev.vercel.app/">
     <meta property="og:locale" content="es_CO">
-    <meta property="og:title" content="¿Se te va el día contestando “precio” por WhatsApp?">
-    <meta property="og:description" content="Te armo una tienda propia con el pedido armado a tu WhatsApp y, si quieres, un asistente que contesta por ti. Mira las tiendas y los precios.">
+    <meta property="og:title" content="¿Estás cansado de responder «precio» todo el día?">
+    <meta property="og:description" content="Te armo una tienda online que contesta por ti y te pasa el pedido listo a WhatsApp. Pruébala y mira los precios.">
     <meta property="og:image" content="https://yeison-dev.vercel.app/img/og-portada.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Portafolio de Yeison García: tiendas online y respuestas automáticas en WhatsApp">
+    <meta property="og:image:alt" content="¿Estás cansado de responder «precio» todo el día? Tiendas online y respuestas automáticas en WhatsApp, de Yeison García">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%232742f5%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 font-weight=%27700%27 font-family=%27Arial%27 text-anchor=%27middle%27 fill=%27white%27%3EYG%3C/text%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/portafolio.css?v=6">
+    <link rel="icon" href="img/marca/yeison-garcia-icono-pequeno.svg" type="image/svg+xml">
+    <link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/fraunces-italic-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <script>
+        // con movimiento permitido la portada y los bloques animan; si portafolio.js no llega en 3 s, todo se muestra quieto
+        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("anima");
+        setTimeout(() => { if (!window.revelaLista) document.documentElement.classList.add("sin-revela"); }, 3000);
+    </script>
+    <link rel="stylesheet" href="css/portafolio.css?v=7">
     <script src="js/medir.js?v=1" defer></script>
+    <script src="js/portafolio.js?v=1" defer></script>
 </head>
 <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+        <symbol id="i-chulo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+        <symbol id="i-bolsa" viewBox="0 0 24 24"><g fill="none" stroke="#fff" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"><rect x="4.5" y="9" width="15" height="12" rx="3.2"/><path d="M8.5 9V7a3.5 3.5 0 0 1 7 0v2"/></g></symbol>
+    </svg>
 
-    <header class="barra" id="inicio">
+    <header class="barra">
         <div class="marco barra-int">
-            <a class="firma" href="#inicio">Yeison García</a>
-            <nav class="menu" aria-label="Principal">
+            <a class="logo" href="#inicio"><img src="img/marca/yeison-garcia-logo.svg" alt="Yeison García" width="96" height="40"></a>
+            <nav class="menu" aria-label="Secciones">
+                <a href="#pruebalo">Pruébalo</a>
                 <a href="#tiendas">Tiendas</a>
-                <a href="#respuestas">Respuestas automáticas</a>
-                <a href="#servicios">Precios</a>
-                <a href="#proceso">Cómo trabajo</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#precios">Precios</a>
+                <a href="#empezar">Cómo empezamos</a>
             </nav>
-            <a class="px" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20de%20mi%20negocio" target="_blank" rel="noopener" data-wa="barra">WhatsApp</a>
+            <a class="wa-chico" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20de%20mi%20negocio" target="_blank" rel="noopener" data-wa="barra"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
         </div>
     </header>
 
-    <main class="marco">
-        <section class="pantalla" aria-labelledby="titular">
-            <h1 id="titular" aria-label="¿Se te va el día contestando “precio” por WhatsApp?">
-                <span class="linea" aria-hidden="true">¿Se te va el día</span>
-                <span class="linea" aria-hidden="true">contestando</span>
-                <span class="linea palabras" aria-hidden="true"><span>“precio”</span><span>“¿hay en M?”</span><span>“¿llega a Cali?”</span></span>
-                <span class="linea" aria-hidden="true">por WhatsApp?</span>
-            </h1>
-            <p class="lead">Te escriben por Instagram y WhatsApp para preguntar lo de siempre (el precio, si hay en su talla, si llega a su ciudad, a qué cuenta consignan), y entre mandar fotos y responder se te van las horas y más de una venta se enfría porque no alcanzaste a contestar. Yo te armo una tienda propia donde el cliente ve todo y el pedido te llega completo al WhatsApp, y si quieres, un asistente que contesta por ti mientras atiendes lo demás.</p>
-            <div class="acciones">
-                <a class="px px-cob" href="#tiendas">Probar una tienda</a>
-                <a class="px px-claro" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20vendo%20por%20Instagram%20y%20WhatsApp%20y%20quiero%20ordenar%20mis%20pedidos" target="_blank" rel="noopener" data-wa="portada">Escríbeme por WhatsApp</a>
+    <main>
+        <!-- inicio: el gancho del reel y la demostración, que ya se ve en la primera pantalla -->
+        <section class="inicio" id="inicio" aria-labelledby="gancho">
+            <div class="marco inicio-grid">
+                <div class="inicio-texto">
+                    <h1 id="gancho" class="titular" aria-label="¿Estás cansado de responder «precio» todo el día?">
+                        <span class="linea" aria-hidden="true">¿Estás cansado</span>
+                        <span class="linea" aria-hidden="true">de responder</span>
+                        <span class="linea linea-clave" aria-hidden="true"><span class="con-insignia"><span class="clave">«precio»</span><span class="insignia"><span class="cuenta">99+</span><svg class="cola" viewBox="0 0 20 16"><path d="M20 0C15 7 9 12 0 16 6 11 8 6 8 0Z"/></svg></span></span></span>
+                        <span class="linea" aria-hidden="true">todo el día?</span>
+                    </h1>
+                    <p class="apoyo inicio-apoyo">Te armo una tienda online que contesta por ti y te pasa el pedido listo a WhatsApp.</p>
+                    <a class="pastilla" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20vendo%20por%20Instagram%20y%20WhatsApp%20y%20quiero%20ordenar%20mis%20pedidos" target="_blank" rel="noopener" data-wa="portada"><svg aria-hidden="true"><use href="#i-wa"/></svg>Escríbeme por WhatsApp</a>
+                </div>
+
+                <div class="prueba" id="pruebalo" aria-labelledby="pruebalo-titulo" data-demo>
+                    <div class="prueba-cab">
+                        <h2 id="pruebalo-titulo">Pruébalo tú</h2>
+                        <p class="nota">Toca una pregunta como si fueras cliente.</p>
+                    </div>
+                    <div class="pedestal">
+                        <div class="cel">
+                            <div class="cel-pantalla">
+                                <div class="cel-estado" aria-hidden="true">
+                                    <span>11:42</span><i class="isla"></i>
+                                    <span class="cel-iconos"><svg viewBox="0 0 18 12" fill="currentColor"><rect y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 27 12" fill="currentColor"><rect x=".6" y=".6" width="22.8" height="10.8" rx="3.4" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".5"/><rect x="2.6" y="2.6" width="11" height="6.8" rx="1.8"/><path d="M25 4.2v3.6a1.9 1.9 0 0 0 0-3.6Z" opacity=".5"/></svg></span>
+                                </div>
+                                <div class="chat-cab">
+                                    <svg class="volver" viewBox="0 0 10 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2 2 8l6 6"/></svg>
+                                    <span class="avatar" aria-hidden="true">C</span>
+                                    <span><b>CEIBA</b><small class="chat-estado">Responde al instante</small></span>
+                                </div>
+                                <div class="chat-hilo" aria-live="polite">
+                                    <p class="chat-fecha">Hoy, 11:42 p. m.</p>
+                                    <p class="chat-vacio">Toca una pregunta de abajo y la tienda te contesta.</p>
+                                </div>
+                                <div class="velo"></div>
+                            </div>
+                            <div class="notificacion" role="status" hidden>
+                                <span class="noti-app" aria-hidden="true"><svg><use href="#i-bolsa"/></svg></span>
+                                <span class="noti-arriba"><span>tu.tienda</span><span>ahora</span></span>
+                                <b>Pedido nuevo</b>
+                                <span class="noti-detalle">Conjunto Laureles, talla M, $329.000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chips" role="group" aria-label="Preguntas para la tienda">
+                        <button class="chip" type="button" data-pregunta="precio"><span class="ok" aria-hidden="true"><svg><use href="#i-chulo"/></svg></span>¿Precio?</button>
+                        <button class="chip" type="button" data-pregunta="envio"><span class="ok" aria-hidden="true"><svg><use href="#i-chulo"/></svg></span>¿Envían a Medellín?</button>
+                        <button class="chip" type="button" data-pregunta="talla"><span class="ok" aria-hidden="true"><svg><use href="#i-chulo"/></svg></span>¿Hay talla M?</button>
+                        <button class="chip" type="button" data-pregunta="pago"><span class="ok" aria-hidden="true"><svg><use href="#i-chulo"/></svg></span>¿Pagan contraentrega?</button>
+                    </div>
+                    <div class="demo-fin" hidden>
+                        <p class="apoyo">Así te llega cada pedido a tu WhatsApp.</p>
+                        <a class="pastilla" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20prob%C3%A9%20la%20demostraci%C3%B3n%20de%20tu%20p%C3%A1gina%20y%20quiero%20que%20mi%20tienda%20conteste%20as%C3%AD" target="_blank" rel="noopener" data-wa="pruebalo"><svg aria-hidden="true"><use href="#i-wa"/></svg>Quiero esto para mi tienda</a>
+                        <button class="boton-texto" type="button" data-reiniciar>Volver a probar</button>
+                    </div>
+                    <p class="nota prueba-nota">Es una demostración: así contestaría tu tienda con tu catálogo.</p>
+                    <template>
+                        <div class="producto">
+                            <img src="img/demo/ceiba-conjunto-laureles.webp" alt="Conjunto Laureles de lino color arena" width="520" height="650">
+                            <div class="producto-cuerpo">
+                                <p class="producto-nombre">Conjunto Laureles</p>
+                                <p class="producto-precio">$329.000</p>
+                                <div class="tallas" role="group" aria-label="Talla">
+                                    <button type="button" aria-pressed="false">XS</button><button type="button" aria-pressed="false">S</button><button type="button" aria-pressed="true">M</button><button type="button" aria-pressed="false">L</button><button type="button" aria-pressed="false">XL</button>
+                                </div>
+                                <ul class="ventajas">
+                                    <li><span class="ok" aria-hidden="true"><svg><use href="#i-chulo"/></svg></span>Envío gratis</li>
+                                    <li><span class="ok" aria-hidden="true"><svg><use href="#i-chulo"/></svg></span>Pagas al recibir</li>
+                                </ul>
+                                <button class="pastilla comprar" type="button">Comprar</button>
+                            </div>
+                        </div>
+                    </template>
+                </div>
             </div>
-            <div class="fila-cel" aria-label="Las tiendas de demostración en el celular">
-                <a class="cel" href="tiendas/silleta/index.html"><img src="img/proyectos/silleta_movil.webp" alt="Tienda SILLETA en el celular" width="390" height="720"></a>
-                <a class="cel" href="tiendas/ceiba/index.html"><img src="img/proyectos/ceiba_movil.webp" alt="Tienda CEIBA en el celular" width="390" height="720"></a>
-                <a class="cel" href="tiendas/grano/index.html"><img src="img/proyectos/grano_movil.webp" alt="Tienda GRANO en el celular" width="390" height="720"></a>
-            </div>
-            <div class="tile t1" aria-hidden="true"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span><span><b>Pedido nuevo</b><small>Camisa lino · M · $189.000</small></span></div>
-            <div class="tile t2" aria-hidden="true"><span><b>Laura Gómez</b><small>Pereira · contraentrega</small></span></div>
-            <div class="tile t3" aria-hidden="true"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span><span><b>Contestado</b><small>“¿Hay en talla M?” · 9:41 p. m.</small></span></div>
         </section>
 
-        <section class="seccion" id="tiendas">
-            <div class="seccion-cab">
-                <h2>Tiendas</h2>
-                <p>Arranco con una tienda real en Shopify y después vienen tres de demostración que puedes recorrer como si fueras cliente: escoges productos, llenas tus datos y el pedido sale armado hacia WhatsApp, tal como le llegaría al dueño de la tienda. Cada una tiene su propia estructura, porque no es una plantilla con otros colores.</p>
+        <!-- ¿Qué me haces? -->
+        <section class="seccion" id="que-hago" aria-labelledby="que-titulo">
+            <div class="marco">
+                <div class="seccion-cab revela">
+                    <h2 id="que-titulo" class="titular">Quieren ver el precio sin <span class="clave" data-destello>preguntar</span>.</h2>
+                    <p class="apoyo">Por eso te armo dos cosas que funcionan solas o juntas.</p>
+                </div>
+                <div class="servicios">
+                    <article class="servicio servicio-tienda revela">
+                        <div class="muestra-pedido" aria-hidden="true">
+                            <p class="muestra-cab"><span class="noti-app"><svg><use href="#i-bolsa"/></svg></span><span><b>Pedido nuevo</b><small>Llegó desde tu tienda</small></span></p>
+                            <ul>
+                                <li><span>Conjunto Laureles, talla M</span><span>$329.000</span></li>
+                                <li><span>Envío a Medellín</span><span>Gratis</span></li>
+                                <li><span>Pago</span><span>Al recibir</span></li>
+                            </ul>
+                        </div>
+                        <h3>Tu tienda online</h3>
+                        <p>Tu catálogo con precios, tallas y fotos, y cada pedido te llega armado a tu WhatsApp.</p>
+                    </article>
+                    <article class="servicio servicio-respuestas revela">
+                        <div class="muestra-chat" aria-hidden="true">
+                            <p class="msj msj-cliente">¿Hacen envíos a Pasto?<small>11:42 p. m.</small></p>
+                            <p class="msj msj-tienda">Sí, a Pasto llega en 2 a 5 días y pagas al recibir.<small>11:42 p. m.</small></p>
+                        </div>
+                        <h3>Respuestas automáticas</h3>
+                        <p>Contestan precio, tallas y envíos con tu catálogo, y te pasan la conversación cuando hace falta una persona.</p>
+                    </article>
+                </div>
             </div>
-            <div class="galeria">
-                <article class="proyecto proyecto-real">
-                    <div class="texto">
+        </section>
+
+        <!-- ¿Cómo se ve? -->
+        <section class="seccion" id="tiendas" aria-labelledby="tiendas-titulo">
+            <div class="marco">
+                <div class="seccion-cab revela">
+                    <h2 id="tiendas-titulo" class="titular">Así se vería la <span class="clave" data-destello>tuya</span></h2>
+                    <p class="apoyo">Ábrelas en tu celular y recórrelas como si fueras cliente.</p>
+                </div>
+                <ul class="vitrina revela" aria-label="Tiendas">
+                    <li class="tienda t-pavoa">
+                        <img src="img/proyectos/vitrina-pavoa.webp" srcset="img/proyectos/vitrina-pavoa-280.webp 280w, img/proyectos/vitrina-pavoa.webp 520w" sizes="(min-width: 1000px) 267px, (min-width: 450px) 276px, 66vw" alt="Tienda PAVOA en el celular" width="520" height="880" loading="lazy" decoding="async">
                         <p class="tipo">Tienda real en Shopify</p>
                         <h3>PAVOA</h3>
-                        <p>Marca de ropa deportiva premium para mujer y hombre. Tienda en Shopify con colecciones por categoría, menú por línea, envíos a toda Colombia y pago en línea.</p>
-                        <a class="px" href="https://pavoa.com.co" target="_blank" rel="noopener">Visitar pavoa.com.co</a>
-                    </div>
-                    <div class="navegador"><div class="navegador-barra"><i></i><i></i><i></i><span>pavoa.com.co</span></div><img src="img/proyectos/pavoa_pc.webp" alt="Portada de la tienda PAVOA" loading="lazy" width="1440" height="900"></div>
-                </article>
-
-                <article class="proyecto p-silleta">
-                    <p class="tipo">Perfumería de lujo, tienda de demostración</p>
-                    <h3>SILLETA</h3>
-                    <p>Para producto caro, la tienda tiene que verse cara. Portada dividida con la foto del frasco, tipografía de perfumería, fichas con tamaño de frasco, set de descubrimiento y caja de regalo.</p>
-                    <ul>
-                        <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Las fotos del frasco y las escenas las hice yo con 3D e IA.</li>
-                        <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Reseñas por producto con distribución de estrellas.</li>
-                        <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Barra de envío gratis que avanza en la bolsa.</li>
-                    </ul>
-                    <a class="px" href="tiendas/silleta/index.html">Abrir la tienda</a>
-                    <a class="cel" href="tiendas/silleta/index.html" tabindex="-1" aria-hidden="true"><img src="img/proyectos/silleta_movil.webp" alt="" loading="lazy" width="390" height="720"></a>
-                </article>
-
-                <article class="proyecto p-grano">
-                    <p class="tipo">Cosmética natural, tienda de demostración</p>
-                    <h3>GRANO</h3>
-                    <p>En cosmética la gente compra cuando entiende qué se está echando en la cara. Por eso la tienda explica la rutina paso a paso, muestra los ingredientes y pone la calificación del producto estrella junto al botón de compra.</p>
-                    <ul>
-                        <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Tarjetas con botón de agregar visible, pensadas para el celular.</li>
-                        <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Rutina en tres pasos enlazada a cada producto.</li>
-                        <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Kits con ahorro para subir el valor del pedido.</li>
-                    </ul>
-                    <a class="px" href="tiendas/grano/index.html">Abrir la tienda</a>
-                    <a class="cel" href="tiendas/grano/index.html" tabindex="-1" aria-hidden="true"><img src="img/proyectos/grano_movil.webp" alt="" loading="lazy" width="390" height="720"></a>
-                </article>
-
-                <article class="proyecto p-ceiba">
-                    <p class="tipo">Moda en lino, tienda de demostración</p>
-                    <h3>CEIBA</h3>
-                    <p>Una tienda de ropa con aire de revista: fotos grandes, cabecera editorial, un look para comprar completo y fichas con las fotos apiladas, como en las marcas de moda grandes.</p>
-                    <ul>
-                        <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>La modelo es Valen, creada con IA para la marca: misma cara en todas las fotos.</li>
-                        <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Tallas, tabla de medidas y cambio de talla gratis.</li>
-                        <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Carrusel de lo más vendido que se desliza con el dedo.</li>
-                    </ul>
-                    <a class="px" href="tiendas/ceiba/index.html">Abrir la tienda</a>
-                    <a class="cel" href="tiendas/ceiba/index.html" tabindex="-1" aria-hidden="true"><img src="img/proyectos/ceiba_movil.webp" alt="" loading="lazy" width="390" height="720"></a>
-                </article>
+                        <p>Ropa deportiva premium para mujer y hombre.</p>
+                        <a class="abrir" href="https://pavoa.com.co" target="_blank" rel="noopener" aria-label="Abrir la tienda PAVOA">Abrir la tienda</a>
+                    </li>
+                    <li class="tienda t-silleta">
+                        <img src="img/proyectos/vitrina-silleta.webp" srcset="img/proyectos/vitrina-silleta-280.webp 280w, img/proyectos/vitrina-silleta.webp 520w" sizes="(min-width: 1000px) 267px, (min-width: 450px) 276px, 66vw" alt="Tienda SILLETA en el celular" width="520" height="880" loading="lazy" decoding="async">
+                        <p class="tipo">Tienda de demostración</p>
+                        <h3>SILLETA</h3>
+                        <p>Perfumería de lujo, con fotos del frasco hechas con 3D e IA.</p>
+                        <a class="abrir" href="tiendas/silleta/index.html" aria-label="Abrir la tienda SILLETA">Abrir la tienda</a>
+                    </li>
+                    <li class="tienda t-grano">
+                        <img src="img/proyectos/vitrina-grano.webp" srcset="img/proyectos/vitrina-grano-280.webp 280w, img/proyectos/vitrina-grano.webp 520w" sizes="(min-width: 1000px) 267px, (min-width: 450px) 276px, 66vw" alt="Tienda GRANO en el celular" width="520" height="880" loading="lazy" decoding="async">
+                        <p class="tipo">Tienda de demostración</p>
+                        <h3>GRANO</h3>
+                        <p>Cosmética natural, con la rutina explicada paso a paso.</p>
+                        <a class="abrir" href="tiendas/grano/index.html" aria-label="Abrir la tienda GRANO">Abrir la tienda</a>
+                    </li>
+                    <li class="tienda t-ceiba">
+                        <img src="img/proyectos/vitrina-ceiba.webp" srcset="img/proyectos/vitrina-ceiba-280.webp 280w, img/proyectos/vitrina-ceiba.webp 520w" sizes="(min-width: 1000px) 267px, (min-width: 450px) 276px, 66vw" alt="Tienda CEIBA en el celular" width="520" height="880" loading="lazy" decoding="async">
+                        <p class="tipo">Tienda de demostración</p>
+                        <h3>CEIBA</h3>
+                        <p>Moda en lino, con una modelo creada con IA para la marca.</p>
+                        <a class="abrir" href="tiendas/ceiba/index.html" aria-label="Abrir la tienda CEIBA">Abrir la tienda</a>
+                    </li>
+                </ul>
+                <div class="vitrina-puntos" aria-hidden="true"></div>
             </div>
         </section>
 
-        <section class="bloque respuestas" id="respuestas">
-            <div class="seccion-cab">
-                <h2>Respuestas automáticas en WhatsApp</h2>
-                <p>Es un asistente con inteligencia artificial conectado al WhatsApp de tu negocio, que contesta las preguntas de siempre con la información de tu catálogo, toma el pedido y te pasa la conversación cuando hace falta una persona. Es un servicio nuevo, así que todavía no tengo casos para mostrarte, y por eso aquí te explico cómo funciona en vez de prometerte números.</p>
+        <!-- ¿Cuánto cuesta? -->
+        <section class="seccion" id="precios" aria-labelledby="precios-titulo">
+            <div class="marco">
+                <div class="seccion-cab revela">
+                    <h2 id="precios-titulo" class="titular">Precios a la <span class="clave" data-destello>vista</span></h2>
+                    <p class="apoyo">Pagas el 50 % para empezar y el 50 % cuando te entrego.</p>
+                </div>
+                <div class="precios-grupos">
+                    <div class="precios-grupo revela">
+                        <h3>Tu tienda y tus respuestas</h3>
+                        <details class="precio-fila" name="precio">
+                            <summary>
+                                <span class="pf-nombre"><b>Tienda Inicio</b><small>Tu tienda en Shopify, lista para vender.</small></span>
+                                <span class="pf-precio"><b>$1.200.000</b><small>un solo pago</small></span>
+                                <span class="pf-mas" aria-hidden="true"></span>
+                            </summary>
+                            <div class="pf-detalle">
+                                <p>Hasta 30 productos cargados, el pedido armado a tu WhatsApp, contraentrega y pagos con Wompi, tu dominio conectado y una sesión para que aprendas a subir productos.</p>
+                                <p class="nota">Shopify cobra aparte su mensualidad: en el plan básico son unos US$25 a 29 al mes y se le pagan directo a ellos.</p>
+                                <a class="pastilla pastilla-chica" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesa%20la%20Tienda%20Inicio" target="_blank" rel="noopener" data-wa="servicio-inicio"><svg aria-hidden="true"><use href="#i-wa"/></svg>Preguntar por esta tienda</a>
+                            </div>
+                        </details>
+                        <details class="precio-fila" name="precio">
+                            <summary>
+                                <span class="pf-nombre"><b>Tienda Completa</b><small>Diseño a la medida, como las de arriba.</small></span>
+                                <span class="pf-precio"><span class="desde">desde</span><b>$2.400.000</b><small>un solo pago</small></span>
+                                <span class="pf-mas" aria-hidden="true"></span>
+                            </summary>
+                            <div class="pf-detalle">
+                                <p>Todo lo de la Tienda Inicio, diseño a la medida, hasta 100 productos, políticas de envíos, cambios y privacidad, analítica para saber qué se vende y velocidad revisada en el celular.</p>
+                                <p class="nota">Si la tienda va en Shopify, la mensualidad de la plataforma también va aparte.</p>
+                                <a class="pastilla pastilla-chica" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesa%20la%20Tienda%20Completa" target="_blank" rel="noopener" data-wa="servicio-completa"><svg aria-hidden="true"><use href="#i-wa"/></svg>Preguntar por esta tienda</a>
+                            </div>
+                        </details>
+                        <details class="precio-fila" name="precio">
+                            <summary>
+                                <span class="pf-nombre"><b>Respuestas automáticas</b><small>Contestan por ti con tu catálogo.</small></span>
+                                <span class="pf-precio"><b>$1.200.000</b><small>+ $250.000 al mes</small></span>
+                                <span class="pf-mas" aria-hidden="true"></span>
+                            </summary>
+                            <div class="pf-detalle">
+                                <p>Contestan precio, tallas, envío y disponibilidad, toman el pedido con los datos de entrega y te pasan la conversación cuando hace falta una persona.</p>
+                                <p class="nota">La mensualidad incluye la IA, el servidor y los ajustes. Los mensajes de WhatsApp los cobra Meta directo a tu negocio, según su tarifa vigente.</p>
+                                <a class="pastilla pastilla-chica" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesan%20las%20respuestas%20autom%C3%A1ticas%20en%20WhatsApp" target="_blank" rel="noopener" data-wa="servicio-respuestas"><svg aria-hidden="true"><use href="#i-wa"/></svg>Preguntar por las respuestas</a>
+                            </div>
+                        </details>
+                        <details class="precio-fila" name="precio">
+                            <summary>
+                                <span class="pf-nombre"><b>Tienda y respuestas</b><small>La Tienda Inicio y las respuestas, juntas.</small></span>
+                                <span class="pf-precio"><b>$2.200.000</b><small>+ $250.000 al mes</small></span>
+                                <span class="pf-mas" aria-hidden="true"></span>
+                            </summary>
+                            <div class="pf-detalle">
+                                <p>Todo lo de la Tienda Inicio y de las respuestas automáticas, y te ahorras $200.000 frente a contratarlos por separado.</p>
+                                <p class="nota">Shopify cobra aparte su mensualidad, y los mensajes de WhatsApp los cobra Meta directo a tu negocio, según su tarifa vigente.</p>
+                                <a class="pastilla pastilla-chica" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesa%20el%20combo%20de%20tienda%20y%20respuestas%20autom%C3%A1ticas" target="_blank" rel="noopener" data-wa="servicio-combo"><svg aria-hidden="true"><use href="#i-wa"/></svg>Preguntar por el combo</a>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="precios-grupo revela">
+                        <h3>Si ya tienes tienda</h3>
+                        <details class="precio-fila" name="precio">
+                            <summary>
+                                <span class="pf-nombre"><b>Ajustes pequeños</b><small>Cambios puntuales en la tienda que ya tienes.</small></span>
+                                <span class="pf-precio"><b>$350.000</b><small>en 1 a 3 días</small></span>
+                                <span class="pf-mas" aria-hidden="true"></span>
+                            </summary>
+                            <div class="pf-detalle">
+                                <p>Textos, banners, botones, colores, una sección nueva, las reseñas o ese error que no te deja vender. Me dices qué quieres cambiar y te confirmo antes de empezar.</p>
+                                <a class="pastilla pastilla-chica" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20necesito%20unos%20ajustes%20en%20mi%20tienda" target="_blank" rel="noopener" data-wa="servicio-ajustes"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir un ajuste</a>
+                            </div>
+                        </details>
+                        <details class="precio-fila" name="precio">
+                            <summary>
+                                <span class="pf-nombre"><b>Revisión completa</b><small>Arreglo lo que frena la compra en tu tienda.</small></span>
+                                <span class="pf-precio"><b>$650.000</b><small>en 5 días</small></span>
+                                <span class="pf-mas" aria-hidden="true"></span>
+                            </summary>
+                            <div class="pf-detalle">
+                                <p>Recorro tu tienda desde el celular como un cliente: textos, reseñas, confianza, carrito y todo lo que hace que alguien no termine la compra. Te entrego lo que encuentre y lo dejo arreglado.</p>
+                                <a class="pastilla pastilla-chica" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20quiero%20la%20revisi%C3%B3n%20completa%20de%20mi%20tienda" target="_blank" rel="noopener" data-wa="servicio-revision"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir la revisión</a>
+                            </div>
+                        </details>
+                        <div class="fundador">
+                            <h3>Precio de fundador</h3>
+                            <p>25 % menos en la instalación para los 3 primeros clientes, a cambio de un testimonio y de mostrar su caso aquí.</p>
+                            <p class="nota">No aplica a la mensualidad de las respuestas automáticas, que se queda en $250.000.</p>
+                            <a class="pastilla pastilla-chica" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20quiero%20uno%20de%20los%20cupos%20con%20precio%20de%20fundador" target="_blank" rel="noopener" data-wa="fundador"><svg aria-hidden="true"><use href="#i-wa"/></svg>Quiero uno de los cupos</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="nota precios-pie">También hago fotos y video de producto, y los precios están en <a href="https://yeisonm1.github.io/catalogo/" target="_blank" rel="noopener">mi catálogo</a>.</p>
             </div>
-            <div class="flujo">
-                <ol class="pasos">
-                    <li><h3>Tu cliente escribe</h3><p>Pregunta lo de siempre: cuánto vale, si hay en su talla, si llega a su ciudad y cuánto se demora.</p></li>
-                    <li><h3>El asistente busca en tu catálogo</h3><p>Contesta con los precios, las tallas y la disponibilidad que tienes en la tienda, así que cuando cambias un precio allá, la respuesta cambia también.</p></li>
-                    <li><h3>Toma el pedido</h3><p>Le pide al cliente su nombre, ciudad, dirección y forma de pago, y te deja el pedido armado igual que en las tiendas de arriba.</p></li>
-                    <li><h3>Te pasa la conversación</h3><p>Si el cliente tiene un reclamo, pide algo especial o el asistente no tiene la respuesta, te avisa para que sigas tú.</p></li>
+        </section>
+
+        <!-- ¿Cómo empezamos? -->
+        <section class="seccion" id="empezar" aria-labelledby="empezar-titulo">
+            <div class="marco">
+                <div class="seccion-cab revela">
+                    <h2 id="empezar-titulo" class="titular">Así <span class="clave" data-destello>empezamos</span></h2>
+                    <p class="apoyo">Todo por WhatsApp y sin formularios largos.</p>
+                </div>
+                <ol class="pasos revela">
+                    <li class="paso"><b>Me escribes</b><span>Me mandas el link de tu tienda o de tu Instagram y me cuentas qué vendes.</span></li>
+                    <li class="paso"><b>Te muestro qué haría</b><span>Te mando gratis un video corto con lo que cambiaría.</span></li>
+                    <li class="paso"><b>Acordamos y arranco</b><span>Cerramos precio y fecha, y me agregas como colaborador, así nunca te pido tu contraseña.</span></li>
+                    <li class="paso"><b>Revisas y pagas el resto</b><span>Lo pruebas en tu celular, pides ajustes y pagas el 50 % final.</span></li>
                 </ol>
-                <figure class="chat">
-                    <div class="chat-cab"><b>Tienda de ropa</b><span>Conversación de ejemplo</span></div>
-                    <div class="chat-cuerpo">
-                        <p class="msj msj-cliente">Hola, cuánto vale la camisa de lino blanca?</p>
-                        <p class="msj">¡Hola! La camisa de lino blanca está en $189.000 y la tengo en tallas S, M y L. ¿Qué talla usas?</p>
-                        <p class="msj msj-cliente">M, y hacen envíos a Pereira?</p>
-                        <p class="msj">Sí, a Pereira llega en 2 a 4 días y puedes pagar contraentrega. Si quieres te la separo, solo necesito tu nombre y la dirección de entrega.</p>
-                        <p class="msj msj-cliente">Laura Gómez, carrera 8 # 21-30, Pereira</p>
-                        <p class="msj">Listo, Laura, quedó así: 1 camisa de lino blanca talla M por $189.000 más envío, pago contraentrega. Ya le pasé tu pedido a la tienda para que lo despachen.</p>
-                    </div>
-                    <figcaption>Es un ejemplo para que veas cómo funciona: los precios, las tallas y los tiempos de envío los saca del catálogo de cada tienda.</figcaption>
-                </figure>
             </div>
         </section>
 
-        <section class="seccion servicios" id="servicios">
-            <div class="bloque">
-                <h2>Servicios y precios</h2>
-                <p class="intro">Los precios están en pesos colombianos y trabajo con el 50 % para empezar y el 50 % al entregar, así que no pagas todo antes de ver tu tienda funcionando.</p>
-                <div class="carril" aria-label="Servicios">
-                    <article class="tarjeta s1">
-                        <h3>Tienda Inicio</h3>
-                        <p class="precio">$1.200.000</p>
-                        <p class="mensual">un solo pago, sin mensualidad conmigo</p>
-                        <p class="desc">Es para cuando ya vendes por chat y quieres tu propia tienda sin complicarte: la monto en Shopify con una plantilla adaptada a tu marca y la dejo lista para que el pedido te llegue armado al WhatsApp.</p>
-                        <ul class="incluye">
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Hasta 30 productos cargados</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Pedido armado a tu WhatsApp</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Contraentrega y pagos con Wompi</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Tu dominio conectado</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Una sesión para que aprendas a subir productos</li>
-                        </ul>
-                        <p class="nota">Shopify cobra aparte su mensualidad, que en el plan básico está en unos US$25 a 29 al mes y se le paga directo a ellos.</p>
-                        <a class="px" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesa%20la%20Tienda%20Inicio" target="_blank" rel="noopener" data-wa="servicio-inicio">Preguntar por esta tienda</a>
-                    </article>
-                    <article class="tarjeta s2">
-                        <h3>Tienda Completa</h3>
-                        <p class="precio"><small>desde</small>$2.400.000</p>
-                        <p class="mensual">un solo pago, sin mensualidad conmigo</p>
-                        <p class="desc">Cuando tu catálogo ya es grande y tu marca necesita verse a su nivel, diseño la tienda a la medida, como las que viste arriba, y la dejo lista para crecer.</p>
-                        <ul class="incluye">
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Todo lo de la Tienda Inicio</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Diseño a la medida de tu marca</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Hasta 100 productos cargados</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Políticas de envíos, cambios y privacidad</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Analítica para saber qué se vende y de dónde llegan</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Velocidad revisada en el celular</li>
-                        </ul>
-                        <p class="nota">Si la tienda va en Shopify, la mensualidad de la plataforma también va aparte.</p>
-                        <a class="px" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesa%20la%20Tienda%20Completa" target="_blank" rel="noopener" data-wa="servicio-completa">Preguntar por esta tienda</a>
-                    </article>
-                    <article class="tarjeta s3">
-                        <h3>Respuestas automáticas en WhatsApp</h3>
-                        <p class="precio">$1.200.000</p>
-                        <p class="mensual">de instalación y $250.000 al mes</p>
-                        <p class="desc">Instalo un asistente con IA en el WhatsApp de tu negocio y lo conecto al catálogo de tu tienda, para que conteste por ti las preguntas de siempre.</p>
-                        <ul class="incluye">
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Contesta precio, tallas, envío y disponibilidad</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Toma el pedido con los datos de entrega</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Te pasa la conversación cuando hace falta una persona</li>
-                        </ul>
-                        <p class="nota">La mensualidad incluye la IA, el servidor y los ajustes, y los mensajes de WhatsApp los cobra Meta directamente a tu negocio, según su tarifa vigente.</p>
-                        <a class="px" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesan%20las%20respuestas%20autom%C3%A1ticas%20en%20WhatsApp" target="_blank" rel="noopener" data-wa="servicio-respuestas">Preguntar por el asistente</a>
-                    </article>
-                    <article class="tarjeta s4">
-                        <h3>Tienda y respuestas automáticas</h3>
-                        <p class="precio">$2.200.000</p>
-                        <p class="mensual">de instalación y $250.000 al mes</p>
-                        <p class="desc">La Tienda Inicio y el asistente juntos, así el cliente pregunta, el asistente le contesta con tu catálogo y el pedido te llega armado.</p>
-                        <ul class="incluye">
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Todo lo de la Tienda Inicio</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Todo lo de las respuestas automáticas</li>
-                            <li><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>Te ahorras $200.000 frente a contratarlos por separado</li>
-                        </ul>
-                        <p class="nota">Shopify cobra aparte su mensualidad, y los mensajes de WhatsApp los cobra Meta directamente a tu negocio, según su tarifa vigente.</p>
-                        <a class="px" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20me%20interesa%20el%20combo%20de%20tienda%20y%20respuestas%20autom%C3%A1ticas" target="_blank" rel="noopener" data-wa="servicio-combo">Preguntar por el combo</a>
-                    </article>
-                </div>
-                <div class="pista" hidden><span class="puntos" aria-hidden="true"></span><span>Desliza para ver los cuatro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-
-                <div class="fundador">
-                    <h3>Precio de fundador</h3>
-                    <p>Los 3 primeros clientes tienen un 25 % menos en el pago de instalación (la tienda, el asistente o el combo) a cambio de un testimonio y de dejarme mostrar su caso aquí, porque prefiero arrancar con negocios reales que con promesas. El descuento no aplica a la mensualidad del asistente, que se queda en $250.000.</p>
-                    <a class="px px-cob" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20quiero%20uno%20de%20los%20cupos%20con%20precio%20de%20fundador" target="_blank" rel="noopener" data-wa="fundador">Quiero uno de los cupos</a>
-                </div>
-
-                <div class="ya">
-                    <h4>Si ya tienes tienda</h4>
-                    <article class="chico">
-                        <h3>Ajustes y cambios pequeños</h3>
-                        <p>Cambios puntuales en la tienda que ya tienes: textos, banners, botones, colores, una sección nueva, las reseñas o ese error que no te deja vender. Me dices qué quieres cambiar y te confirmo antes de empezar.</p>
-                        <p class="plazo">Listo en 1 a 3 días</p>
-                        <span class="precio">$350.000</span>
-                        <a class="px px-chico" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20necesito%20unos%20ajustes%20en%20mi%20tienda" target="_blank" rel="noopener" data-wa="servicio-ajustes">Pedir un ajuste</a>
-                    </article>
-                    <article class="chico">
-                        <h3>Revisión completa de la tienda</h3>
-                        <p>Recorro tu tienda completa desde el celular como un cliente: textos, reseñas, confianza, carrito y todo lo que hace que alguien no termine la compra. Te entrego lo que encuentre y lo dejo arreglado.</p>
-                        <p class="plazo">Lista en 5 días</p>
-                        <span class="precio">$650.000</span>
-                        <a class="px px-chico" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20quiero%20la%20revisi%C3%B3n%20completa%20de%20mi%20tienda" target="_blank" rel="noopener" data-wa="servicio-revision">Pedir la revisión</a>
-                    </article>
-                </div>
-                <p class="fotos">También hago fotos y video de producto, con fotos de campaña, videos cortos y modelo propia para tu marca sin estudio ni sesión, y los precios están en <a href="https://yeisonm1.github.io/catalogo/" target="_blank" rel="noopener">mi catálogo</a>.</p>
-            </div>
-        </section>
-
-        <section class="seccion proceso" id="proceso">
-            <div class="seccion-cab">
-                <h2>Cómo trabajo</h2>
-            </div>
-            <ol class="pasos">
-                <li><h3>Me escribes</h3><p>Me mandas el link de tu tienda o de tu Instagram y me cuentas qué vendes, todo por WhatsApp y sin formularios largos.</p></li>
-                <li><h3>Te muestro qué haría</h3><p>Reviso tu tienda o tu Instagram desde el celular y te mando gratis un video corto con lo que cambiaría.</p></li>
-                <li><h3>Acordamos y arranco</h3><p>Cerramos precio y fecha, y me agregas como colaborador en Shopify, así que nunca te pido tu contraseña.</p></li>
-                <li><h3>Revisas y pagas el resto</h3><p>Lo pruebas en tu celular, pides ajustes y pagas el 50 % final cuando quedas contento.</p></li>
-            </ol>
-        </section>
-
-        <section class="sobre">
-            <h2>Sobre mí</h2>
-            <div class="sobre-texto">
-                <p>Soy Yeison García, desarrollador web en Medellín. Trabajo con Shopify, HTML, CSS y JavaScript, armo asistentes con IA para WhatsApp y produzco las fotos y videos de producto con 3D e inteligencia artificial.</p>
-                <p>Me enfoco en negocios pequeños y medianos que venden por Instagram y WhatsApp y quieren que su tienda se vea al nivel de su producto, y prefiero pocos clientes bien atendidos que muchos a medias.</p>
-            </div>
-        </section>
-
-        <section class="contacto" id="contacto">
-            <h2>¿Hablamos de tu negocio?</h2>
-            <p>Mándame el link de tu tienda o de tu Instagram y te digo en un video corto qué haría, sin compromiso.</p>
-            <a class="px px-cob" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20este%20es%20el%20link%20de%20mi%20tienda%20o%20de%20mi%20Instagram%3A%20" target="_blank" rel="noopener" data-wa="contacto">Escribirme por WhatsApp</a>
-            <div class="redes">
-                <a href="https://www.instagram.com/mesa24g/" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://www.tiktok.com/@mesa24g" target="_blank" rel="noopener">TikTok</a>
-                <a href="https://github.com/YeisonM1" target="_blank" rel="noopener">GitHub</a>
+        <!-- cierre -->
+        <section class="cierre" id="contacto" aria-labelledby="cierre-titulo">
+            <div class="marco cierre-int">
+                <svg class="simbolo revela" viewBox="0 0 100 100" aria-hidden="true">
+                    <rect x="14" y="10" width="72" height="72" rx="20" fill="none" stroke="#1C1D20" stroke-width="5.5"/>
+                    <path d="M34 50 Q50 66 66 50" fill="none" stroke="#1C1D20" stroke-width="5.5" stroke-linecap="round"/>
+                    <path class="brillo-simbolo" d="M62 24 L70 32" fill="none" stroke="#2742F5" stroke-width="4.4" stroke-linecap="round"/>
+                    <circle cx="50" cy="92" r="4.4" fill="#2742F5"/>
+                </svg>
+                <h2 id="cierre-titulo" class="titular revela">Tiendas que contestan <span class="clave" data-destello>por ti</span></h2>
+                <p class="apoyo revela">Mándame el link de tu tienda o de tu Instagram y te digo en un video corto qué haría, sin compromiso.</p>
+                <a class="pastilla revela" href="https://wa.me/573007056457?text=Hola%20Yeison%2C%20este%20es%20el%20link%20de%20mi%20tienda%20o%20de%20mi%20Instagram%3A%20" target="_blank" rel="noopener" data-wa="contacto"><svg aria-hidden="true"><use href="#i-wa"/></svg>Escríbeme por WhatsApp</a>
+                <nav class="redes" aria-label="Redes">
+                    <a href="https://www.instagram.com/mesa24g/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.tiktok.com/@mesa24g" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://www.youtube.com/@mesa24g" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://github.com/YeisonM1" target="_blank" rel="noopener">GitHub</a>
+                </nav>
             </div>
         </section>
     </main>
 
     <footer class="pie marco">
-        <p>© 2026 Yeison García, Medellín.</p>
-        <p>SILLETA, GRANO y CEIBA son marcas de demostración creadas por mí para mostrar mi trabajo.</p>
+        <p class="nota">© 2026 Yeison García, Medellín.</p>
+        <p class="nota">SILLETA, GRANO y CEIBA son marcas de demostración creadas por mí para mostrar mi trabajo.</p>
     </footer>
-
-    <script>
-        // barra: línea inferior al bajar
-        const barra = document.querySelector('.barra');
-        addEventListener('scroll', () => barra.classList.toggle('barra-baja', scrollY > 30), { passive: true });
-
-        // carrusel de precios: puntos que siguen el deslizamiento, solo cuando no caben las cuatro tarjetas
-        const carril = document.querySelector('.carril'), pista = document.querySelector('.pista'), puntos = document.querySelector('.puntos');
-        const tarjetas = [...carril.children];
-        tarjetas.forEach((_, i) => puntos.appendChild(Object.assign(document.createElement('i'), { className: i ? '' : 'on' })));
-        const pintarPista = () => {
-            pista.hidden = carril.scrollWidth <= carril.clientWidth + 4;
-            const paso = tarjetas[0].offsetWidth + 14, activo = Math.min(tarjetas.length - 1, Math.round(carril.scrollLeft / paso));
-            [...puntos.children].forEach((p, k) => p.classList.toggle('on', k === activo));
-        };
-        carril.addEventListener('scroll', pintarPista, { passive: true });
-        addEventListener('resize', pintarPista);
-        pintarPista();
-
-        // destello del combo: una sola vez, cuando entra en pantalla
-        const combo = document.querySelector('.s4');
-        if ('IntersectionObserver' in window) {
-            const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { combo.classList.add('brilla'); io.disconnect(); } }, { threshold: .6 });
-            io.observe(combo);
-        }
-    </script>
 </body>
 </html>

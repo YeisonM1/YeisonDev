@@ -1,0 +1,426 @@
+{
+  "fecha": "2026-10-24T23:14:54.571Z",
+  "errores": [],
+  "desbordes": {
+    "320": {
+      "anchoDocumento": 320,
+      "anchoPantalla": 320,
+      "fuera": [],
+      "cortados": []
+    },
+    "360": {
+      "anchoDocumento": 360,
+      "anchoPantalla": 360,
+      "fuera": [],
+      "cortados": []
+    },
+    "375": {
+      "anchoDocumento": 375,
+      "anchoPantalla": 375,
+      "fuera": [],
+      "cortados": []
+    },
+    "390": {
+      "anchoDocumento": 390,
+      "anchoPantalla": 390,
+      "fuera": [],
+      "cortados": []
+    },
+    "414": {
+      "anchoDocumento": 414,
+      "anchoPantalla": 414,
+      "fuera": [],
+      "cortados": []
+    },
+    "768": {
+      "anchoDocumento": 768,
+      "anchoPantalla": 768,
+      "fuera": [],
+      "cortados": []
+    },
+    "1024": {
+      "anchoDocumento": 1024,
+      "anchoPantalla": 1024,
+      "fuera": [],
+      "cortados": []
+    },
+    "1280": {
+      "anchoDocumento": 1280,
+      "anchoPantalla": 1280,
+      "fuera": [],
+      "cortados": []
+    },
+    "1440": {
+      "anchoDocumento": 1440,
+      "anchoPantalla": 1440,
+      "fuera": [],
+      "cortados": []
+    },
+    "1920": {
+      "anchoDocumento": 1920,
+      "anchoPantalla": 1920,
+      "fuera": [],
+      "cortados": []
+    }
+  },
+  "textoCortado": {},
+  "precios": {
+    "390": [
+      {
+        "grupo": "Tu tienda y tus respuestas",
+        "precios": [
+          "$1.200.000",
+          "$2.400.000",
+          "$1.200.000",
+          "$2.200.000"
+        ],
+        "bordeDerecho": [
+          317,
+          317,
+          317,
+          317
+        ],
+        "diferenciaPx": 0,
+        "botonMas": [
+          329,
+          329,
+          329,
+          329
+        ]
+      },
+      {
+        "grupo": "Si ya tienes tienda",
+        "precios": [
+          "$350.000",
+          "$650.000"
+        ],
+        "bordeDerecho": [
+          317,
+          317
+        ],
+        "diferenciaPx": 0,
+        "botonMas": [
+          329,
+          329
+        ]
+      }
+    ],
+    "1440": [
+      {
+        "grupo": "Tu tienda y tus respuestas",
+        "precios": [
+          "$1.200.000",
+          "$2.400.000",
+          "$1.200.000",
+          "$2.200.000"
+        ],
+        "bordeDerecho": [
+          734.3,
+          734.3,
+          734.3,
+          734.3
+        ],
+        "diferenciaPx": 0,
+        "botonMas": [
+          746.3,
+          746.3,
+          746.3,
+          746.3
+        ]
+      },
+      {
+        "grupo": "Si ya tienes tienda",
+        "precios": [
+          "$350.000",
+          "$650.000"
+        ],
+        "bordeDerecho": [
+          1261,
+          1261
+        ],
+        "diferenciaPx": 0,
+        "botonMas": [
+          1273,
+          1273
+        ]
+      }
+    ]
+  },
+  "whatsapp": [
+    {
+      "origen": "barra",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, vi tu portafolio y quiero hablar de mi negocio",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    },
+    {
+      "origen": "portada",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, vendo por Instagram y WhatsApp y quiero ordenar mis pedidos",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    },
+    {
+      "origen": "pruebalo",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, probé la demostración de tu página y quiero que mi tienda conteste así",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": "se prueba al final de la demo"
+    },
+    {
+      "origen": "servicio-inicio",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, me interesa la Tienda Inicio",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    },
+    {
+      "origen": "servicio-completa",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, me interesa la Tienda Completa",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    },
+    {
+      "origen": "servicio-respuestas",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, me interesan las respuestas automáticas en WhatsApp",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    },
+    {
+      "origen": "servicio-combo",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, me interesa el combo de tienda y respuestas automáticas",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    },
+    {
+      "origen": "servicio-ajustes",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, necesito unos ajustes en mi tienda",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    },
+    {
+      "origen": "servicio-revision",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, quiero la revisión completa de mi tienda",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    },
+    {
+      "origen": "fundador",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, quiero uno de los cupos con precio de fundador",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    },
+    {
+      "origen": "contacto",
+      "numero": "573007056457",
+      "mensaje": "Hola Yeison, este es el link de mi tienda o de mi Instagram: ",
+      "pestanaNueva": true,
+      "noopener": true,
+      "abre": true
+    }
+  ],
+  "medicion": [
+    "/whatsapp/barra",
+    "/whatsapp/portada",
+    "/whatsapp/servicio-inicio",
+    "/whatsapp/servicio-completa",
+    "/whatsapp/servicio-respuestas",
+    "/whatsapp/servicio-combo",
+    "/whatsapp/servicio-ajustes",
+    "/whatsapp/servicio-revision",
+    "/whatsapp/fundador",
+    "/whatsapp/contacto"
+  ],
+  "demo": {
+    "390": {
+      "pasos": [],
+      "estadoMientrasEscribe": "escribiendo…",
+      "puntosEscribiendo": 1,
+      "tarjeta": {
+        "nombre": "Conjunto Laureles",
+        "precio": "$329.000",
+        "tallas": [
+          "XS",
+          "S",
+          "M*",
+          "L",
+          "XL"
+        ],
+        "ventajas": [
+          "Envío gratis",
+          "Pagas al recibir"
+        ],
+        "boton": "Comprar",
+        "fotoCargada": true
+      },
+      "pastillasUsadas": 4,
+      "comprarLlama": true,
+      "tallaElegida": "L",
+      "notificacion": {
+        "titulo": "Pedido nuevo",
+        "detalle": "Conjunto Laureles, talla L, $329.000"
+      },
+      "conversacion": [
+        "Cliente: ¿Precio?",
+        "Tienda: ¡Hola! Está en $329.000 y el envío es gratis.",
+        "Cliente: ¿Envían a Medellín?",
+        "Tienda: Sí, a Medellín llega en 1 a 2 días y el envío es gratis.",
+        "Cliente: ¿Hay talla M?",
+        "Tienda: Sí, hay en M. También en XS, S, L y XL.",
+        "Cliente: ¿Pagan contraentrega?",
+        "Tienda: Sí, pagas cuando te llegue. También puedes pagar con Nequi o tarjeta.",
+        "Cliente: Lo quiero en talla L",
+        "Tienda: ¡Listo! Tu pedido quedó hecho y lo pagas cuando te llegue."
+      ],
+      "finVisible": true,
+      "pastillasOcultas": true,
+      "whatsappFinal": {
+        "href": "https://wa.me/573007056457?text=Hola%20Yeison%2C%20prob%C3%A9%20la%20demostraci%C3%B3n%20de%20tu%20p%C3%A1gina%20y%20quiero%20que%20mi%20tienda%20conteste%20as%C3%AD",
+        "origen": "pruebalo",
+        "abre": true
+      },
+      "reinicio": {
+        "mensajes": 0,
+        "pastillasUsadas": 0,
+        "notificacionOculta": true,
+        "finOculto": true,
+        "pastillasVisibles": true
+      }
+    },
+    "1440": {
+      "pasos": [],
+      "estadoMientrasEscribe": "escribiendo…",
+      "puntosEscribiendo": 1,
+      "tarjeta": {
+        "nombre": "Conjunto Laureles",
+        "precio": "$329.000",
+        "tallas": [
+          "XS",
+          "S",
+          "M*",
+          "L",
+          "XL"
+        ],
+        "ventajas": [
+          "Envío gratis",
+          "Pagas al recibir"
+        ],
+        "boton": "Comprar",
+        "fotoCargada": true
+      },
+      "pastillasUsadas": 4,
+      "comprarLlama": true,
+      "tallaElegida": "L",
+      "notificacion": {
+        "titulo": "Pedido nuevo",
+        "detalle": "Conjunto Laureles, talla L, $329.000"
+      },
+      "conversacion": [
+        "Cliente: ¿Precio?",
+        "Tienda: ¡Hola! Está en $329.000 y el envío es gratis.",
+        "Cliente: ¿Envían a Medellín?",
+        "Tienda: Sí, a Medellín llega en 1 a 2 días y el envío es gratis.",
+        "Cliente: ¿Hay talla M?",
+        "Tienda: Sí, hay en M. También en XS, S, L y XL.",
+        "Cliente: ¿Pagan contraentrega?",
+        "Tienda: Sí, pagas cuando te llegue. También puedes pagar con Nequi o tarjeta.",
+        "Cliente: Lo quiero en talla L",
+        "Tienda: ¡Listo! Tu pedido quedó hecho y lo pagas cuando te llegue."
+      ],
+      "finVisible": true,
+      "pastillasOcultas": true,
+      "whatsappFinal": {
+        "href": "https://wa.me/573007056457?text=Hola%20Yeison%2C%20prob%C3%A9%20la%20demostraci%C3%B3n%20de%20tu%20p%C3%A1gina%20y%20quiero%20que%20mi%20tienda%20conteste%20as%C3%AD",
+        "origen": "pruebalo",
+        "abre": true
+      },
+      "reinicio": {
+        "mensajes": 0,
+        "pastillasUsadas": 0,
+        "notificacionOculta": true,
+        "finOculto": true,
+        "pastillasVisibles": true
+      }
+    }
+  },
+  "insignia": {
+    "390": "99+",
+    "1440": "99+"
+  },
+  "reducido": {
+    "insignia": "99+",
+    "animaActiva": false,
+    "demo": {
+      "pasos": [],
+      "estadoMientrasEscribe": "Responde al instante",
+      "puntosEscribiendo": 0,
+      "tarjeta": {
+        "nombre": "Conjunto Laureles",
+        "precio": "$329.000",
+        "tallas": [
+          "XS",
+          "S",
+          "M*",
+          "L",
+          "XL"
+        ],
+        "ventajas": [
+          "Envío gratis",
+          "Pagas al recibir"
+        ],
+        "boton": "Comprar",
+        "fotoCargada": true
+      },
+      "pastillasUsadas": 4,
+      "comprarLlama": true,
+      "tallaElegida": "L",
+      "notificacion": {
+        "titulo": "Pedido nuevo",
+        "detalle": "Conjunto Laureles, talla L, $329.000"
+      },
+      "conversacion": [
+        "Cliente: ¿Precio?",
+        "Tienda: ¡Hola! Está en $329.000 y el envío es gratis.",
+        "Cliente: ¿Envían a Medellín?",
+        "Tienda: Sí, a Medellín llega en 1 a 2 días y el envío es gratis.",
+        "Cliente: ¿Hay talla M?",
+        "Tienda: Sí, hay en M. También en XS, S, L y XL.",
+        "Cliente: ¿Pagan contraentrega?",
+        "Tienda: Sí, pagas cuando te llegue. También puedes pagar con Nequi o tarjeta.",
+        "Cliente: Lo quiero en talla L",
+        "Tienda: ¡Listo! Tu pedido quedó hecho y lo pagas cuando te llegue."
+      ],
+      "finVisible": true,
+      "pastillasOcultas": true,
+      "whatsappFinal": {
+        "href": "https://wa.me/573007056457?text=Hola%20Yeison%2C%20prob%C3%A9%20la%20demostraci%C3%B3n%20de%20tu%20p%C3%A1gina%20y%20quiero%20que%20mi%20tienda%20conteste%20as%C3%AD",
+        "origen": "pruebalo",
+        "abre": true
+      },
+      "reinicio": {
+        "mensajes": 0,
+        "pastillasUsadas": 0,
+        "notificacionOculta": true,
+        "finOculto": true,
+        "pastillasVisibles": true
+      }
+    }
+  }
+}
