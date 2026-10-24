@@ -100,14 +100,14 @@ h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.035em; }
 .servicio { padding: 30px 26px 34px 0; display: flex; flex-direction: column; gap: 12px; }
 .servicio + .servicio { padding-left: 26px; border-left: 1px solid #34342f; }
 .servicio h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
-.servicio .precio { margin: 0; font-size: 40px; font-weight: 800; letter-spacing: -0.04em; color: #fff; }
+.servicio .precio { margin: 0; white-space: nowrap; font-size: clamp(30px, 2.8vw, 38px); font-weight: 800; letter-spacing: -0.04em; color: #fff; }
 .servicio .precio-texto { font-size: 24px; letter-spacing: -0.02em; padding-block: 10px 6px; }
 .servicio p { margin: 0; color: #bdbdb6; font-size: 16px; }
 .servicio .plazo { margin-top: auto; padding-top: 12px; color: #fff; font-weight: 600; font-size: 15px; }
 .servicio-fuerte .precio { color: #8fa0ff; }
 .servicios .enlace { margin-top: auto; color: #8fa0ff; }
 .servicios .enlace:hover { color: #fff; }
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
     .lista-servicios { grid-template-columns: 1fr 1fr; }
     .servicio:nth-child(3) { padding-left: 0; border-left: 0; }
     .servicio:nth-child(n+3) { border-top: 1px solid #34342f; }
@@ -118,13 +118,19 @@ h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.035em; }
     .servicio + .servicio { border-top: 1px solid #34342f; }
 }
 
-.servicio .precio small { display: block; margin-bottom: 2px; font-size: 18px; font-weight: 600; letter-spacing: 0; color: #a9a9a2; }
+.servicio .precio small { margin-right: 8px; font-size: 16px; font-weight: 600; letter-spacing: 0; color: #a9a9a2; }
 .servicio .mensual { margin-top: -8px; color: #fff; font-weight: 600; }
 .incluye { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; color: #bdbdb6; font-size: 15px; }
 .incluye li { position: relative; padding-left: 20px; }
 .incluye li::before { content: ""; position: absolute; left: 0; top: .7em; width: 9px; height: 2px; background: #8fa0ff; }
 .servicio .nota { margin-top: auto; padding-top: 14px; border-top: 1px solid #34342f; color: #8f8f88; font-size: 14px; }
 .servicio .nota + .enlace, .servicio .plazo + .enlace { margin-top: 4px; }
+/* las cuatro tarjetas comparten filas (título, precio, detalle, texto, lista, nota y botón): todo queda a la misma altura */
+.lista-filas .servicio { display: grid; grid-row: span 7; grid-template-rows: subgrid; row-gap: 12px; align-content: start; }
+.lista-filas .servicio > * { align-self: start; }
+.lista-filas .servicio .nota { margin-top: 0; }
+.lista-filas .servicio .enlace { margin-top: 4px; justify-self: start; }
+.servicios-extra { margin: 30px 0 0; padding-top: 20px; border-top: 1px solid #34342f; color: #a9a9a2; font-size: 15px; max-width: 80ch; }
 .fundador { display: grid; grid-template-columns: 1fr auto; gap: 10px 40px; align-items: center; margin-top: 48px; padding: 30px; border: 1px solid #8fa0ff; border-radius: 18px; }
 .fundador h3 { font-size: 26px; font-weight: 800; letter-spacing: -0.03em; color: #fff; }
 .fundador p { grid-column: 1; margin: 0; color: #bdbdb6; max-width: 60ch; }

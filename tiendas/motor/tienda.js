@@ -374,6 +374,7 @@
       return `*${i + 1}. ${p.nombre}*\n${detalle}`;
     });
     return [
+      `Pedido de prueba desde la demo de ${T.nombre}`, "",
       `Hola ${T.nombre}, quiero hacer este pedido:`, "",
       lineas.join("\n\n"), "",
       `Subtotal: ${plata(sub)}`, `Envío: ${envio ? plata(envio) : "Gratis"}`, `*Total: ${plata(sub + envio)}*`, "",
@@ -382,8 +383,7 @@
       `*Ciudad:* ${d.get("ciudad")}, ${d.get("departamento")}`,
       `*Dirección:* ${d.get("direccion")}`,
       d.get("correo") ? `*Correo:* ${d.get("correo")}` : null,
-      `*Forma de pago:* ${d.get("pago")}`, "",
-      `(Pedido de prueba en la tienda de demostración ${T.nombre})`,
+      `*Forma de pago:* ${d.get("pago")}`,
     ].filter((l) => l !== null).join("\n");
   };
 
